@@ -80,14 +80,26 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.7 }}
-          className="mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full max-w-[320px] sm:max-w-none sm:w-auto"
+          className="mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full max-w-[380px] sm:max-w-none sm:w-auto"
         >
-          <a href="#angebot" className="btn btn-primary flex-1 sm:flex-none">
+          <motion.a
+            href="#angebot"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: [0.23, 1, 0.32, 1], delay: 0.78 }}
+            className="btn btn-primary w-full sm:w-auto"
+          >
             Angebot ansehen
-          </a>
-          <a href="tel:+4965028811" className="btn btn-onDark-secondary flex-1 sm:flex-none">
+          </motion.a>
+          <motion.a
+            href="tel:+4965028811"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: [0.23, 1, 0.32, 1], delay: 0.86 }}
+            className="btn btn-onDark-secondary w-full sm:w-auto"
+          >
             06502 8811
-          </a>
+          </motion.a>
         </motion.div>
       </motion.div>
 
