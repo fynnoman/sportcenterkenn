@@ -1,26 +1,189 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-white: #ffffff;
+  --color-bg: #f5f5f7;
+  --color-bg-2: #ebebef;
+  --color-ink: #1d1d1f;
+  --color-ink-2: #6e6e73;
+  --color-ink-3: #86868b;
+  --color-line: #d2d2d7;
+  --color-black: #000000;
+  --color-jet: #0b0b0d;
+
+  --color-brand: #b52a2a;
+  --color-brand-2: #8a1e1e;
+  --color-brand-tint: #f5e6e6;
+  --color-brand-ink: #4a1414;
+
+  --font-display: var(--font-geist);
+  --font-body: var(--font-geist);
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html, body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-geist), -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "cv11";
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-ink) 92%, transparent);
+  color: var(--color-bg);
+}
+
+/* Liquid Glass — refined */
+.glass {
+  background: color-mix(in oklab, var(--color-bg) 62%, transparent);
+  backdrop-filter: saturate(180%) blur(22px);
+  -webkit-backdrop-filter: saturate(180%) blur(22px);
+  border: 1px solid color-mix(in oklab, var(--color-ink) 8%, transparent);
+}
+
+.glass-dark {
+  background: color-mix(in oklab, #000 45%, transparent);
+  backdrop-filter: saturate(180%) blur(22px);
+  -webkit-backdrop-filter: saturate(180%) blur(22px);
+  border: 1px solid color-mix(in oklab, #fff 12%, transparent);
+}
+
+/* Buttons — Apple pill */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 980px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  transition: transform 160ms var(--ease-out),
+              background-color 160ms var(--ease-out),
+              color 160ms var(--ease-out),
+              opacity 160ms var(--ease-out);
+  will-change: transform;
+}
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: var(--color-brand);
+  color: var(--color-white);
+  box-shadow: inset 0 -1px 0 color-mix(in oklab, #000 25%, transparent),
+              0 2px 0 color-mix(in oklab, var(--color-brand-2) 35%, transparent);
+}
+.btn-primary:hover { background: var(--color-brand-2); }
+
+.btn-dark {
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+.btn-dark:hover { background: #383838; }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-ink);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-ink) 22%, transparent);
+}
+.btn-secondary:hover { background: color-mix(in oklab, var(--color-ink) 5%, transparent); }
+
+.btn-onDark-primary {
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+.btn-onDark-primary:hover { background: #f0f0f0; }
+
+.btn-onDark-secondary {
+  background: transparent;
+  color: var(--color-white);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, #fff 30%, transparent);
+}
+.btn-onDark-secondary:hover { background: color-mix(in oklab, #fff 8%, transparent); }
+
+/* Link with arrow — Apple "Learn more →" */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-brand);
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  transition: opacity 160ms var(--ease-out);
+}
+.link-arrow:hover { text-decoration: underline; text-underline-offset: 3px; }
+.link-arrow-onDark { color: #f26a6a; }
+
+/* Section headline */
+.h-display {
+  font-family: var(--font-geist), -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+.h-eyebrow {
+  font-size: 14px;
+  letter-spacing: -0.005em;
+  font-weight: 500;
+  color: var(--color-ink-2);
+}
+.h-eyebrow-onDark { color: color-mix(in oklab, #fff 70%, transparent); }
+
+/* Card */
+.card {
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--color-white);
+  box-shadow:
+    0 1px 0 color-mix(in oklab, var(--color-ink) 6%, transparent),
+    0 20px 60px -30px color-mix(in oklab, var(--color-ink) 25%, transparent);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--color-brand) 60%, transparent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Red accent utilities */
+.text-brand { color: var(--color-brand); }
+.text-brand-onDark { color: #ee5a5a; }
+.bg-brand { background: var(--color-brand); }
+.rule-brand {
+  height: 2px;
+  width: 40px;
+  background: var(--color-brand);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Hairline divider */
+.divider {
+  height: 1px;
+  background: var(--color-line);
+}
+
+/* Reduce-motion respect */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
