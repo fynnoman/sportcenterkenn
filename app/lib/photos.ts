@@ -2,14 +2,14 @@ const U = "https://images.unsplash.com/";
 const q = (w: number) => `?auto=format&fit=crop&w=${w}&q=85`;
 
 export const PHOTOS = {
-  hero: "/images/hero-luftbild.png",
-  heroMobile: "/images/hero-luftbild-mobile.png",
+  hero: "/images/hero-luftbild.webp",
+  heroMobile: "/images/hero-luftbild-mobile.webp",
 
-  soccerHero: "/images/soccer.png",
-  tennisHero: "/images/tennis.png",
-  battlekartHero: "/images/battlekart.png",
-  billiards: "/images/billard.png",
-  kids: "/images/geburtstag.png",
+  soccerHero: "/images/soccer.webp",
+  tennisHero: "/images/tennis.webp",
+  battlekartHero: "/images/battlekart.webp",
+  billiards: "/images/billard.webp",
+  kids: "/images/geburtstag.webp",
 
   pizza: `${U}photo-1513104890138-7c749659a591${q(1600)}`,
   pizzaOven: `${U}photo-1590947132387-155cc02f3212${q(1200)}`,

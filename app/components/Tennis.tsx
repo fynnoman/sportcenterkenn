@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PHOTOS } from "../lib/photos";
 
 export default function Tennis() {
@@ -32,6 +33,14 @@ export default function Tennis() {
             </div>
             <div className="mt-4 text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-ink-3">
               Buchung telefonisch · beide Nummern erreichbar
+            </div>
+            <div className="mt-5 flex flex-wrap gap-4 text-[14.5px]">
+              <Link href="/tennishalle-trier" className="link-arrow !font-medium">
+                Tennishalle bei Trier →
+              </Link>
+              <Link href="/padel-trier" className="link-arrow !font-medium">
+                Padel bei Trier →
+              </Link>
             </div>
           </div>
         </div>

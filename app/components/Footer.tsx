@@ -2,19 +2,27 @@ const groups: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Sport",
     links: [
-      { label: "Soccer", href: "#soccer" },
-      { label: "Tennis & Padel", href: "#tennis" },
+      { label: "Soccerhalle Trier", href: "/soccerhalle-trier" },
+      { label: "Tennishalle Trier", href: "/tennishalle-trier" },
+      { label: "Padel Trier", href: "/padel-trier" },
       { label: "BattleKart", href: "#battlekart" },
-      { label: "Kindergeburtstag", href: "#geburtstag" },
+    ],
+  },
+  {
+    title: "Anlässe",
+    links: [
+      { label: "Kindergeburtstag Trier", href: "/kindergeburtstag-trier" },
+      { label: "Teamevent Trier", href: "/teamevent-trier" },
+      { label: "Indoor Aktivitäten Trier", href: "/indoor-aktivitaeten-trier" },
+      { label: "Sommerkarte", href: "/#sommerkarte" },
     ],
   },
   {
     title: "Center",
     links: [
-      { label: "Buchen", href: "#buchen" },
-      { label: "Sommerkarte", href: "#sommerkarte" },
-      { label: "Drumherum", href: "#extras" },
-      { label: "Kontakt", href: "#kontakt" },
+      { label: "Buchen", href: "/#buchen" },
+      { label: "Drumherum", href: "/#extras" },
+      { label: "Kontakt", href: "/#kontakt" },
     ],
   },
   {
@@ -23,13 +31,6 @@ const groups: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Impressum", href: "#" },
       { label: "Datenschutz", href: "#" },
       { label: "AGB", href: "#" },
-    ],
-  },
-  {
-    title: "Social",
-    links: [
-      { label: "Instagram", href: "#" },
-      { label: "Facebook", href: "#" },
     ],
   },
 ];

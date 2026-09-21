@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PHOTOS } from "../lib/photos";
 
 export default function Geburtstag() {
@@ -73,6 +74,14 @@ export default function Geburtstag() {
         </div>
         <div className="mt-4 text-center text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-ink-3">
           Termine telefonisch abstimmen
+        </div>
+        <div className="mt-6 text-center">
+          <Link
+            href="/kindergeburtstag-trier"
+            className="link-arrow !text-ink !font-medium"
+          >
+            Zur Seite Kindergeburtstag Trier →
+          </Link>
         </div>
       </div>
     </section>

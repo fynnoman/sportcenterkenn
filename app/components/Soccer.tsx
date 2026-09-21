@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PHOTOS } from "../lib/photos";
 
 export default function Soccer() {
@@ -32,6 +33,14 @@ export default function Soccer() {
             </div>
             <div className="mt-4 text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-white/55">
               Buchung telefonisch · beide Nummern erreichbar
+            </div>
+            <div className="mt-5">
+              <Link
+                href="/soccerhalle-trier"
+                className="link-arrow link-arrow-onDark !font-medium"
+              >
+                Soccerhalle bei Trier ansehen →
+              </Link>
             </div>
           </div>
         </div>

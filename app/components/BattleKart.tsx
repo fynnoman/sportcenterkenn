@@ -36,6 +36,14 @@ export default function BattleKart() {
             <div className="mt-4 text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-white/55">
               Buchung online · battlekart.com/de/trier
             </div>
+            <div className="mt-5">
+              <a
+                href="/teamevent-trier"
+                className="link-arrow link-arrow-onDark !font-medium"
+              >
+                BattleKart als Teamevent bei Trier →
+              </a>
+            </div>
           </div>
         </div>
       </div>
