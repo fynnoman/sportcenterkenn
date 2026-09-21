@@ -23,6 +23,20 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [open]);
+
   return (
     <header
       className={clsx(
@@ -130,13 +144,13 @@ export default function Nav() {
             open ? "max-h-[520px] opacity-100 pb-4" : "max-h-0 opacity-0"
           )}
         >
-          <div className="flex flex-col text-[15px] rounded-2xl bg-white/95 backdrop-blur-md p-2 mt-2 shadow-lg text-ink">
+          <div className="flex flex-col text-[16px] rounded-2xl bg-white/95 backdrop-blur-md p-2 mt-2 shadow-lg text-ink">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="py-3 px-3 rounded-xl hover:bg-bg transition-colors"
+                className="py-3.5 px-3 rounded-xl hover:bg-bg transition-colors"
               >
                 {l.label}
               </a>
@@ -146,7 +160,7 @@ export default function Nav() {
               onClick={() => setOpen(false)}
               className="btn btn-primary mt-3 w-full"
             >
-              Anrufen · 0151 111 611 216
+              Anrufen
             </a>
           </div>
         </div>

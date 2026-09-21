@@ -49,7 +49,7 @@ const rows: Row[] = [
 
 export default function WieBucheIch() {
   return (
-    <section id="buchen" className="relative bg-bg py-20 md:py-28 px-5 md:px-6">
+    <section id="buchen" className="relative bg-bg py-16 md:py-28 px-5 md:px-6">
       <div className="mx-auto max-w-[1200px]">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-6 mb-10 md:mb-14">
           <div>
@@ -59,7 +59,7 @@ export default function WieBucheIch() {
                 Buchung
               </span>
             </div>
-            <h2 className="text-[32px] sm:text-[40px] md:text-[56px] font-semibold tracking-[-0.03em] leading-[1.05] max-w-[720px]">
+            <h2 className="text-[34px] sm:text-[42px] md:text-[56px] font-semibold tracking-[-0.03em] leading-[1.05] max-w-[720px]">
               Wie buche ich?
             </h2>
           </div>
@@ -73,7 +73,7 @@ export default function WieBucheIch() {
           {rows.map((r) => (
             <div
               key={r.tag}
-              className="rounded-[20px] md:rounded-[22px] bg-white p-6 md:p-8 flex flex-col"
+              className="rounded-[20px] md:rounded-[22px] bg-white p-5 md:p-8 flex flex-col"
             >
               <div className="flex items-baseline gap-3">
                 <span className="text-[13px] md:text-[14px] uppercase tracking-[0.14em] text-brand font-semibold tabular-nums">
@@ -87,7 +87,7 @@ export default function WieBucheIch() {
                 {r.body}
               </p>
               {r.actions.length > 0 && (
-                <div className="mt-6 flex flex-wrap gap-2 md:gap-3">
+                <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-3">
                   {r.actions.map((a) => (
                     <a
                       key={a.label}
@@ -95,7 +95,7 @@ export default function WieBucheIch() {
                       {...(a.external
                         ? { target: "_blank", rel: "noreferrer" }
                         : {})}
-                      className="btn btn-primary !h-9 !px-4 !text-[13px]"
+                      className="btn btn-primary !h-11 sm:!h-9 !px-5 sm:!px-4 !text-[14.5px] sm:!text-[13px] w-full sm:w-auto"
                     >
                       {a.label}
                     </a>

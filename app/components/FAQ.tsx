@@ -1,7 +1,7 @@
 const faqs = [
   {
     q: "Kann ich spontan vorbeikommen oder muss ich reservieren?",
-    a: "Spontan geht meistens. Sicher ist besser, deshalb ruf am besten kurz an. Für Wochenenden und Abendzeiten empfehlen wir Reservierung.",
+    a: "Wir empfehlen dir, vorher zu buchen. So ist dein Platz sicher reserviert und du musst nicht warten. Ein kurzer Anruf reicht, gerade an Wochenenden und Abendzeiten lohnt sich das immer.",
   },
   {
     q: "Was kostet eine Stunde Fußball oder Tennis?",
@@ -35,7 +35,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="relative bg-bg-2 py-20 md:py-32 px-5 md:px-6">
+    <section className="relative bg-bg-2 py-16 md:py-32 px-5 md:px-6">
       <div className="mx-auto max-w-[1000px]">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-6 mb-8 md:mb-14">
           <div>
@@ -63,12 +63,12 @@ export default function FAQ() {
               key={f.q}
               className="group border-b border-line last:border-b-0"
             >
-              <summary className="list-none cursor-pointer flex items-center justify-between gap-4 md:gap-6 px-5 md:px-8 py-4 md:py-6 text-[14.5px] md:text-[18px] font-medium tracking-[-0.01em] hover:bg-bg transition-colors duration-150 ease-out">
-                <span className="flex items-baseline gap-3 md:gap-4">
+              <summary className="list-none cursor-pointer flex items-center justify-between gap-3 md:gap-6 px-5 md:px-8 py-4 md:py-6 text-[15px] md:text-[18px] font-medium tracking-[-0.01em] leading-snug hover:bg-bg transition-colors duration-150 ease-out">
+                <span className="flex items-baseline gap-3 md:gap-4 min-w-0">
                   <span className="text-[11px] md:text-[12px] uppercase tracking-[0.14em] text-brand font-semibold tabular-nums w-5 md:w-6 shrink-0">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span>{f.q}</span>
+                  <span className="min-w-0">{f.q}</span>
                 </span>
                 <span
                   aria-hidden
@@ -84,7 +84,7 @@ export default function FAQ() {
                   </svg>
                 </span>
               </summary>
-              <div className="px-5 md:px-8 pb-5 md:pb-7 pl-[52px] md:pl-[74px] text-[14px] md:text-[16px] leading-[1.55] text-ink-2 max-w-[720px]">
+              <div className="px-5 md:px-8 pb-5 md:pb-7 pl-[44px] md:pl-[74px] text-[14.5px] md:text-[16px] leading-[1.55] text-ink-2 max-w-[720px]">
                 {f.a}
               </div>
             </details>

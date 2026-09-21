@@ -23,7 +23,16 @@ export default function Hero() {
     >
       <div
         aria-hidden
-        className="absolute inset-0"
+        className="absolute inset-0 md:hidden"
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(15,5,5,0.35) 0%, rgba(15,5,5,0.40) 45%, rgba(0,0,0,0.85) 92%, rgba(0,0,0,0.95) 100%), url('${PHOTOS.heroMobile}')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 hidden md:block"
         style={{
           backgroundImage: `linear-gradient(180deg, rgba(15,5,5,0.35) 0%, rgba(15,5,5,0.40) 45%, rgba(0,0,0,0.85) 92%, rgba(0,0,0,0.95) 100%), url('${PHOTOS.hero}')`,
           backgroundSize: "cover",
@@ -32,18 +41,18 @@ export default function Hero() {
       />
 
       {/* Corner brand line */}
-      <div className="absolute top-20 md:top-28 left-5 md:left-10 z-10 flex items-center gap-2 md:gap-3 text-white/80">
+      <div className="absolute top-[76px] md:top-28 left-5 md:left-10 z-10 flex items-center gap-2 md:gap-3 text-white/80">
         <span className="rule-brand" />
-        <span className="text-[10px] md:text-[11px] uppercase tracking-[0.20em] md:tracking-[0.24em]">
+        <span className="text-[10px] md:text-[11px] uppercase tracking-[0.18em] md:tracking-[0.24em]">
           Boris Cucka Sport · Kenn
         </span>
       </div>
 
       <motion.div
         style={{ y, opacity }}
-        className="relative z-10 flex flex-col items-center justify-center text-center px-5 md:px-6 pt-32 pb-24 md:pt-48 md:pb-32"
+        className="relative z-10 flex flex-col items-center justify-center text-center px-5 md:px-6 pt-28 pb-24 md:pt-48 md:pb-32"
       >
-        <h1 className="h-display text-[56px] sm:text-[80px] md:text-[128px] lg:text-[152px] max-w-[1000px]">
+        <h1 className="h-display text-[52px] sm:text-[80px] md:text-[128px] lg:text-[152px] max-w-[1000px]">
           <span className="block overflow-hidden pb-[0.05em]">
             <motion.span
               initial={{ y: "105%" }}
@@ -70,7 +79,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.55 }}
-          className="mt-8 md:mt-14 max-w-[900px] text-[22px] sm:text-[28px] md:text-[40px] leading-[1.25] md:leading-[1.2] tracking-[-0.015em] text-white font-medium"
+          className="mt-6 md:mt-14 max-w-[900px] text-[20px] sm:text-[28px] md:text-[40px] leading-[1.3] md:leading-[1.2] tracking-[-0.015em] text-white font-medium px-1 sm:px-0"
         >
           Ein Ort zum Abschalten, Schwitzen und Lachen.
         </motion.p>

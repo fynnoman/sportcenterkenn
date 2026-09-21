@@ -63,11 +63,11 @@ export default function Geburtstag() {
           />
         </div>
 
-        <div className="mt-10 md:mt-14 text-center flex flex-wrap items-center justify-center gap-3">
-          <a href="tel:+4915111611216" className="btn btn-primary">
+        <div className="mt-10 md:mt-14 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 px-2 sm:px-0">
+          <a href="tel:+4915111611216" className="btn btn-primary w-full sm:w-auto">
             0151 111 611 216
           </a>
-          <a href="tel:+491756663336" className="btn btn-secondary">
+          <a href="tel:+491756663336" className="btn btn-secondary w-full sm:w-auto">
             0175 666 3336
           </a>
         </div>

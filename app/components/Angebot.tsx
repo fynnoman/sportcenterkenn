@@ -32,7 +32,7 @@ const items = [
 
 export default function Angebot() {
   return (
-    <section id="angebot" className="relative bg-bg py-20 md:py-28 px-6">
+    <section id="angebot" className="relative bg-bg py-16 md:py-28 px-5 md:px-6">
       <div className="mx-auto max-w-[1200px]">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-6 mb-10 md:mb-14">
           <div>

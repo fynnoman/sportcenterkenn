@@ -3,6 +3,7 @@ const q = (w: number) => `?auto=format&fit=crop&w=${w}&q=85`;
 
 export const PHOTOS = {
   hero: "/images/hero-luftbild.png",
+  heroMobile: "/images/hero-luftbild-mobile.png",
 
   soccerHero: "/images/soccer.png",
   tennisHero: "/images/tennis.png",

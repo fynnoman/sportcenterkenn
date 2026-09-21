@@ -4,7 +4,7 @@ export default function Extras() {
   return (
     <section
       id="extras"
-      className="relative bg-bg text-ink overflow-hidden py-20 md:py-32 px-5 md:px-6"
+      className="relative bg-bg text-ink overflow-hidden py-16 md:py-32 px-5 md:px-6"
     >
       <div className="mx-auto max-w-[1200px]">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-6 mb-10 md:mb-14">
@@ -30,7 +30,7 @@ export default function Extras() {
             href="https://www.pizzabarkenn.de"
             target="_blank"
             rel="noreferrer"
-            className="group relative overflow-hidden rounded-[22px] text-white aspect-[4/5] md:aspect-auto md:min-h-[440px] flex flex-col justify-end p-5 md:p-7 transition-transform duration-200 ease-out hover:-translate-y-[3px]"
+            className="group relative overflow-hidden rounded-[22px] text-white aspect-[5/4] sm:aspect-[4/5] md:aspect-auto md:min-h-[440px] flex flex-col justify-end p-5 md:p-7 transition-transform duration-200 ease-out hover:-translate-y-[3px]"
             style={{
               backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 100%), url('${PHOTOS.pizza}')`,
               backgroundSize: "cover",
@@ -57,7 +57,7 @@ export default function Extras() {
 
           <div
             id="billard"
-            className="relative overflow-hidden rounded-[22px] text-white aspect-[4/5] md:aspect-auto md:min-h-[440px] flex flex-col justify-end p-5 md:p-7"
+            className="relative overflow-hidden rounded-[22px] text-white aspect-[5/4] sm:aspect-[4/5] md:aspect-auto md:min-h-[440px] flex flex-col justify-end p-5 md:p-7"
             style={{
               backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 100%), url('${PHOTOS.billiards}')`,
               backgroundSize: "cover",
@@ -77,9 +77,9 @@ export default function Extras() {
           </div>
 
           <div
-            className="relative overflow-hidden rounded-[22px] text-white aspect-[4/5] md:aspect-auto md:min-h-[440px] flex flex-col justify-end p-5 md:p-7 bg-jet"
+            className="relative overflow-hidden rounded-[22px] text-white aspect-[5/4] sm:aspect-[4/5] md:aspect-auto md:min-h-[440px] flex flex-col justify-end p-5 md:p-7"
             style={{
-              backgroundImage: `linear-gradient(180deg, rgba(20,20,20,0.6) 0%, rgba(0,0,0,0.9) 100%), url('${PHOTOS.kids}')`,
+              backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 100%), url('${PHOTOS.kids}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

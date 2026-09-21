@@ -22,11 +22,11 @@ export default function Soccer() {
               aufziehen oder Sohn und Tochter vorbeischicken: Indoor im Käfig
               oder Outdoor auf offenem Platz, bei uns rollt der Ball.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="tel:+4915111611216" className="btn btn-onDark-primary">
+            <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+              <a href="tel:+4915111611216" className="btn btn-onDark-primary w-full sm:w-auto">
                 0151 111 611 216
               </a>
-              <a href="tel:+491756663336" className="btn btn-onDark-secondary">
+              <a href="tel:+491756663336" className="btn btn-onDark-secondary w-full sm:w-auto">
                 0175 666 3336
               </a>
             </div>

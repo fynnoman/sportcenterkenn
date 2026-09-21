@@ -22,11 +22,11 @@ export default function Tennis() {
               Runden. Buche einzeln, sichere dir ein Abo oder hol dir die
               Sommerkarte. Belag, Bälle und Bespannung übernehmen wir.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="tel:+4915111611216" className="btn btn-primary">
+            <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+              <a href="tel:+4915111611216" className="btn btn-primary w-full sm:w-auto">
                 0151 111 611 216
               </a>
-              <a href="tel:+491756663336" className="btn btn-secondary">
+              <a href="tel:+491756663336" className="btn btn-secondary w-full sm:w-auto">
                 0175 666 3336
               </a>
             </div>
