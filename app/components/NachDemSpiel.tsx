@@ -42,7 +42,7 @@ export default function NachDemSpiel() {
               </div>
               <p className="mt-3 text-[14px] md:text-[15px] text-white/75 leading-relaxed max-w-md">
                 Pool-Tische neben der Bar. Reservierung an der Theke oder
-                telefonisch — bei Bedarf gibt es Queue und Kreide.
+                telefonisch, bei Bedarf gibt es Queue und Kreide.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {["Pool", "Reservierbar", "Neben der Bar"].map((c) => (

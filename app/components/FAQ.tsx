@@ -5,7 +5,7 @@ const faqs = [
   },
   {
     q: "Was kostet eine Stunde Fußball oder Tennis?",
-    a: "Die Preise hängen von Uhrzeit, Platz und Gruppengröße ab. Am schnellsten erfährst du sie am Telefon — wir stellen dir das passende Paket zusammen.",
+    a: "Die Preise hängen von Uhrzeit, Platz und Gruppengröße ab. Am schnellsten erfährst du sie am Telefon, wir stellen dir das passende Paket zusammen.",
   },
   {
     q: "Muss ich Sportschuhe oder Ausrüstung mitbringen?",
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "Kann ich die Pizza-Bar auch ohne Sport nutzen?",
-    a: "Klar. Komm einfach zum Essen und Trinken vorbei — Tisch reservieren lohnt sich bei Gruppen.",
+    a: "Klar. Komm einfach zum Essen und Trinken vorbei, Tisch reservieren lohnt sich bei Gruppen.",
   },
 ];
 

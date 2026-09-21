@@ -36,7 +36,7 @@ export default function SoLaeuftEs() {
             </h2>
             <p className="mt-6 text-[15.5px] md:text-[16px] leading-[1.5] text-ink-2 max-w-sm">
               Wir sind flexibel und nehmen uns Zeit. Reservieren spart dir die
-              Wartezeit — spontan geht meistens auch.
+              Wartezeit, spontan geht meistens auch.
             </p>
 
             <div className="mt-8 md:mt-10 rounded-[20px] md:rounded-[22px] bg-white p-6 md:p-7">
@@ -48,7 +48,7 @@ export default function SoLaeuftEs() {
               </div>
               <ul className="mt-5 space-y-2 text-[14.5px] text-ink-2">
                 <li className="flex justify-between">
-                  <span>Mo – Fr</span>
+                  <span>Mo bis Fr</span>
                   <span className="text-ink">nach Absprache</span>
                 </li>
                 <li className="flex justify-between">

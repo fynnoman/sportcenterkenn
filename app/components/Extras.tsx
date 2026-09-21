@@ -44,7 +44,7 @@ export default function Extras() {
               Pizza-Bar
             </div>
             <p className="mt-3 text-[13.5px] md:text-[14.5px] text-white/80 leading-relaxed max-w-md">
-              Steinofen, kalte Getränke, Karte und Reservierung — alles direkt
+              Steinofen, kalte Getränke, Karte und Reservierung, alles direkt
               über die Pizza-Bar Kenn.
             </p>
             <span className="mt-4 inline-flex items-center gap-1 text-[13px] text-white/90 group-hover:text-white transition-colors">
@@ -91,7 +91,7 @@ export default function Extras() {
               Spiel-Automaten
             </div>
             <p className="mt-3 text-[13.5px] md:text-[14.5px] text-white/80 leading-relaxed max-w-md">
-              Klassische Kids-Automaten für kurze Pausen zwischen den Spielen —
+              Klassische Kids-Automaten für kurze Pausen zwischen den Spielen,
               gemütlich neben der Pizza-Bar.
             </p>
           </div>

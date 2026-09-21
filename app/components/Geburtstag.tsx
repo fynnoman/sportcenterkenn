@@ -11,13 +11,13 @@ export default function Geburtstag() {
           </span>
         </div>
         <h2 className="h-display text-[38px] sm:text-[60px] md:text-[104px] max-w-[1000px] mx-auto leading-[1.05]">
-          Zwei Stunden toben.<br />
-          <span className="text-ink-2">Nachspielzeit inklusive.</span>
+          Toben, lachen,<br />
+          <span className="text-ink-2">Kuchen essen.</span>
         </h2>
         <p className="mt-6 md:mt-8 max-w-[620px] mx-auto text-[15.5px] md:text-[21px] leading-[1.45] md:leading-[1.4] text-ink-2 tracking-[-0.01em]">
           Der perfekte Rahmen für kleine Sportler: eigener Platz, reservierter
-          Tisch, alles was gebraucht wird. Wenn der Platz frei ist, spielt ihr
-          einfach weiter.
+          Tisch, alles was gebraucht wird. Die Details stimmen wir gemeinsam
+          am Telefon ab.
         </p>
       </div>
 
@@ -32,12 +32,12 @@ export default function Geburtstag() {
         />
         <div className="grid md:grid-cols-3 gap-4 md:gap-6">
           <Tile
-            eyebrow="Paket"
-            title="2 Std. Soccer & Sport"
+            eyebrow="Bei uns"
+            title="Soccer & Sport"
             items={[
-              "Kostenlose Nachspielzeit, wenn der Platz frei ist",
+              "Eigener Platz für die Truppe",
               "Reservierter Tisch für Kuchen und Geschenke",
-              "Bälle vor Ort — eigene sind auch willkommen",
+              "Bälle vor Ort, eigene sind auch willkommen",
             ]}
             variant="dark"
           />

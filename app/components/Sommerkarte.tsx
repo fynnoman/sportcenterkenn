@@ -7,19 +7,16 @@ export default function Sommerkarte() {
             <div className="flex items-center gap-3 mb-6">
               <span className="rule-brand" />
               <span className="h-eyebrow uppercase tracking-[0.18em] text-brand font-semibold">
-                Sommerkarte 2026
+                Sommerkarte
               </span>
             </div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-[68px] sm:text-[88px] md:text-[112px] font-semibold tracking-[-0.04em] leading-none text-brand">
-                140
-              </span>
-              <span className="text-[30px] sm:text-[38px] md:text-[44px] font-medium text-brand/70 leading-none">
-                €
-              </span>
-            </div>
-            <p className="mt-4 text-[15px] text-ink-2">
-              Gültig vom 01.05. bis 30.09.
+            <h2 className="text-[36px] sm:text-[48px] md:text-[68px] font-semibold tracking-[-0.03em] leading-[1.05] text-ink">
+              Ein Sommer,{" "}
+              <span className="text-brand">ein Preis.</span>
+            </h2>
+            <p className="mt-6 text-[15px] md:text-[16px] text-ink-2 leading-[1.5] max-w-[420px]">
+              Der bequeme Weg durch die Outdoor-Saison. Ohne jedes Mal buchen,
+              ohne Rechnen. Konditionen erfährst du am schnellsten telefonisch.
             </p>
             <a href="tel:+4915111611216" className="btn btn-primary mt-8">
               0151 111 611 216
@@ -32,8 +29,7 @@ export default function Sommerkarte() {
             </div>
             <ul className="space-y-4 text-[16px] leading-[1.45]">
               {[
-                "Kostenlose Nutzung aller Outdoorplätze für Erwachsene",
-                "Ganzjährige Hallennutzung für Kinder und Jugendliche",
+                "Freie Nutzung der Outdoor-Plätze",
                 "Bei Regen: Wechsel in die Halle möglich",
                 "Vergünstigte Tarife auf Tennis-Equipment",
               ].map((line) => (

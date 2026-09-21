@@ -4,7 +4,7 @@ const items = [
   {
     tag: "01",
     title: "Indoor & Outdoor Soccer",
-    line: "6 Plätze · Kunstrasen · UEFA-Zulassung",
+    line: "Drinnen wie draußen",
     href: "#soccer",
     image: PHOTOS.soccerHero,
     span: "md:col-span-3 md:row-span-2",
@@ -13,7 +13,7 @@ const items = [
   {
     tag: "02",
     title: "Tennis & Padel",
-    line: "Sand · drinnen wie draußen",
+    line: "Sand & Netz",
     href: "#tennis",
     image: PHOTOS.tennisHero,
     span: "md:col-span-3 md:row-span-1",
@@ -22,7 +22,7 @@ const items = [
   {
     tag: "03",
     title: "BattleKart",
-    line: "Elektro-Karts mit AR",
+    line: "Karts trifft Videospiel",
     href: "#battlekart",
     image: PHOTOS.battlekartHero,
     span: "md:col-span-3 md:row-span-1",
@@ -48,7 +48,7 @@ export default function Angebot() {
           </div>
           <p className="text-[14.5px] md:text-[16px] text-ink-2 max-w-[380px]">
             Alles unter einem Dach: sportlich, gesellig und wetterunabhängig.
-            Wähl aus, worauf du heute Lust hast — oder kombinier's.
+            Wähl aus, worauf du heute Lust hast, oder kombinier's.
           </p>
         </div>
 
@@ -93,26 +93,6 @@ export default function Angebot() {
           ))}
         </div>
 
-        <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-          {[
-            ["365", "Tage im Jahr geöffnet"],
-            ["6", "Fußballplätze"],
-            ["4", "Tennis- & Padelplätze"],
-            ["AR", "BattleKart · Elektro"],
-          ].map(([kpi, label]) => (
-            <div
-              key={label}
-              className="rounded-[18px] bg-white p-5 md:p-6"
-            >
-              <div className="flex items-baseline gap-2">
-                <div className="text-[34px] md:text-[42px] font-semibold tracking-[-0.03em] leading-none text-brand">
-                  {kpi}
-                </div>
-              </div>
-              <div className="mt-1 text-[13.5px] text-ink-2">{label}</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
