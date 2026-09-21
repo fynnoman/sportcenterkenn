@@ -39,26 +39,41 @@ export default function BattleKart() {
               und einfach nur guten Abend.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="tel:+4965028811" className="btn btn-onDark-primary">
-                Session buchen
+              <a
+                href="https://www.battlekart.com/de/trier"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-onDark-primary"
+              >
+                Zur BattleKart-Seite
               </a>
-              <a href="#kontakt" className="link-arrow link-arrow-onDark">
-                Firmenevent anfragen →
-              </a>
+            </div>
+            <div className="mt-4 text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-white/55">
+              Buchung online · battlekart.com/de/trier
             </div>
           </div>
         </div>
       </div>
 
       <div className="px-5 md:px-6">
-        <div
-          className="mx-auto max-w-[1200px] aspect-[4/3] sm:aspect-[16/9] rounded-[20px] md:rounded-[28px] overflow-hidden bg-[#0a0a0a]"
+        <a
+          href="https://www.battlekart.com/de/trier"
+          target="_blank"
+          rel="noreferrer"
+          className="group mx-auto max-w-[1200px] aspect-[4/3] sm:aspect-[16/9] rounded-[20px] md:rounded-[28px] overflow-hidden bg-[#0a0a0a] relative flex items-end justify-start"
           style={{
-            backgroundImage: `url('${PHOTOS.battlekartHero}')`,
+            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.65) 100%), url('${PHOTOS.battlekartHero}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-        />
+        >
+          <span className="m-5 md:m-7 inline-flex items-center gap-2 text-[12px] md:text-[13px] uppercase tracking-[0.16em] text-white/90 bg-black/40 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20 transition-transform duration-200 ease-out group-hover:-translate-y-[2px]">
+            battlekart.com/de/trier
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+        </a>
       </div>
 
       <div className="mx-auto max-w-[1200px] px-5 md:px-6 pt-12 md:pt-20 pb-20 md:pb-32">

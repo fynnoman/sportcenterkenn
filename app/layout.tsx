@@ -9,14 +9,14 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Sportcenter Kenn — Boris Cucka Sport",
+  title: "Sportcenter Kenn",
   description:
-    "Sportcenter Kenn bei Trier. Indoor- und Outdoor-Soccer, Tennis auf Sand, BattleKart, Billard und Pizza-Bar. Reservieren unter 06502 8811.",
+    "Sportcenter Kenn bei Trier. Indoor- und Outdoor-Soccer, Tennis & Padel auf Sand, BattleKart und mehr. Reservierung telefonisch unter 0151 111 611 216.",
   metadataBase: new URL("https://sportcenter-kenn.de"),
   openGraph: {
-    title: "Sportcenter Kenn — Boris Cucka Sport",
+    title: "Sportcenter Kenn",
     description:
-      "Fußball, Tennis, BattleKart, Billard und Pizza-Bar unter einem Dach.",
+      "Soccer, Tennis & Padel, BattleKart und mehr unter einem Dach.",
     locale: "de_DE",
     type: "website",
   },

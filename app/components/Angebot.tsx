@@ -12,8 +12,8 @@ const items = [
   },
   {
     tag: "02",
-    title: "Tennis auf Sand",
-    line: "3× Outdoor · 1× Indoor",
+    title: "Tennis & Padel",
+    line: "Sand · drinnen wie draußen",
     href: "#tennis",
     image: PHOTOS.tennisHero,
     span: "md:col-span-3 md:row-span-1",
@@ -25,25 +25,7 @@ const items = [
     line: "Elektro-Karts mit AR",
     href: "#battlekart",
     image: PHOTOS.battlekartHero,
-    span: "md:col-span-2 md:row-span-1",
-    size: "text-[22px] md:text-[26px]",
-  },
-  {
-    tag: "04",
-    title: "Billard",
-    line: "Pool an der Bar",
-    href: "#billard",
-    image: PHOTOS.billiards,
-    span: "md:col-span-2 md:row-span-1",
-    size: "text-[22px] md:text-[26px]",
-  },
-  {
-    tag: "05",
-    title: "Pizza-Bar",
-    line: "Steinofen · Getränke",
-    href: "#nach-dem-spiel",
-    image: PHOTOS.pizza,
-    span: "md:col-span-2 md:row-span-1",
+    span: "md:col-span-3 md:row-span-1",
     size: "text-[22px] md:text-[26px]",
   },
 ];
@@ -61,7 +43,7 @@ export default function Angebot() {
               </span>
             </div>
             <h2 className="text-[32px] sm:text-[40px] md:text-[52px] font-semibold tracking-[-0.03em] leading-[1.05] max-w-[720px]">
-              Fünf Gründe, <span className="text-brand">wiederzukommen.</span>
+              Der Fokus liegt <span className="text-brand">auf dem Sport.</span>
             </h2>
           </div>
           <p className="text-[14.5px] md:text-[16px] text-ink-2 max-w-[380px]">
@@ -82,7 +64,6 @@ export default function Angebot() {
                 backgroundPosition: "center",
               }}
             >
-              {/* Number chip */}
               <div className="absolute top-4 left-4 md:top-6 md:left-6 h-8 w-8 md:h-10 md:w-10 rounded-full bg-brand text-white grid place-items-center text-[13px] md:text-[15px] font-semibold tracking-[-0.01em]">
                 {it.tag}
               </div>
@@ -116,8 +97,8 @@ export default function Angebot() {
           {[
             ["365", "Tage im Jahr geöffnet"],
             ["6", "Fußballplätze"],
-            ["4", "Tennisplätze"],
-            ["1", "Pizza-Bar"],
+            ["4", "Tennis- & Padelplätze"],
+            ["AR", "BattleKart · Elektro"],
           ].map(([kpi, label]) => (
             <div
               key={label}

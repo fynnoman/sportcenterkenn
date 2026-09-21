@@ -46,12 +46,15 @@ export default function Soccer() {
               Käfig oder Outdoor auf offenem Platz — bei uns rollt der Ball.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="tel:+4965028811" className="btn btn-onDark-primary">
-                Platz buchen
+              <a href="tel:+4915111611216" className="btn btn-onDark-primary">
+                0151 111 611 216
               </a>
-              <a href="#kontakt" className="link-arrow link-arrow-onDark">
-                Turnier anfragen →
+              <a href="tel:+491756663336" className="btn btn-onDark-secondary">
+                0175 666 3336
               </a>
+            </div>
+            <div className="mt-4 text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-white/55">
+              Buchung telefonisch · beide Nummern erreichbar
             </div>
           </div>
         </div>

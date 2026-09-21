@@ -12,9 +12,9 @@ const features = [
       "Draußen scheint die Sonne? Draußen. Regen im Anmarsch? Rüber in die Halle, gleicher Belag.",
   },
   {
-    title: "Buchen oder Abo",
+    title: "Padel dazu",
     body:
-      "Einzelne Stunden für spontanes Spiel, oder feste Slots pro Woche als Abo — beides möglich.",
+      "Padel-Court für schnelle Ballwechsel, Doppel und den perfekten Einstieg — direkt neben den Tennisplätzen.",
   },
   {
     title: "Ausleihe & Bespannung",
@@ -32,26 +32,30 @@ export default function Tennis() {
             <div className="flex items-center gap-3 mb-4">
               <span className="rule-brand" />
               <span className="h-eyebrow uppercase tracking-[0.18em] text-brand font-semibold">
-                02 · Tennis
+                02 · Tennis & Padel
               </span>
             </div>
             <h2 className="text-[34px] sm:text-[48px] md:text-[76px] font-semibold tracking-[-0.03em] leading-[1.05] md:leading-[1.02]">
-              Sand, drinnen wie draußen — vier Plätze das ganze Jahr.
+              Sand, drinnen wie draußen — dazu der Padel-Court.
             </h2>
           </div>
           <div className="md:col-span-5">
             <p className="text-[15.5px] md:text-[17px] leading-[1.5] text-ink-2">
-              Drei Sandplätze im Freien, ein weiterer in der Halle. Buche einzeln,
-              hol dir ein Abo oder sichere dir die Sommerkarte für die
-              Outdoor-Saison. Wir kümmern uns um Belag, Bälle und Bespannung.
+              Drei Sandplätze im Freien, einer in der Halle, plus der
+              Padel-Court für schnelle Runden. Buche einzeln, sichere dir ein
+              Abo oder hol dir die Sommerkarte. Belag, Bälle und Bespannung
+              übernehmen wir.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="tel:+4965028811" className="btn btn-primary">
-                Platz buchen
+              <a href="tel:+4915111611216" className="btn btn-primary">
+                0151 111 611 216
               </a>
-              <a href="#sommerkarte" className="link-arrow">
-                Sommerkarte ansehen →
+              <a href="tel:+491756663336" className="btn btn-secondary">
+                0175 666 3336
               </a>
+            </div>
+            <div className="mt-4 text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-ink-3">
+              Buchung telefonisch · beide Nummern erreichbar
             </div>
           </div>
         </div>
@@ -89,9 +93,9 @@ export default function Tennis() {
         </div>
 
         <div className="mt-10 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-y-6 md:gap-y-0 gap-x-4 md:gap-x-6 border-t border-line pt-8 md:pt-12">
-          <NumStatLight kpi="4" label="Plätze" />
+          <NumStatLight kpi="4" label="Tennisplätze" />
+          <NumStatLight kpi="1" label="Padel-Court" />
           <NumStatLight kpi="3 × Outdoor" label="Sandplatz · offen" />
-          <NumStatLight kpi="1 × Indoor" label="Sandplatz · Halle" />
           <NumStatLight kpi="140 €" label="Sommerkarte" />
         </div>
       </div>

@@ -61,7 +61,7 @@ export default function Hero() {
               transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1], delay: 0.28 }}
               className="inline-block will-change-transform text-brand-onDark"
             >
-              Kenn.
+              Kenn
             </motion.span>
           </span>
         </h1>
@@ -70,10 +70,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.55 }}
-          className="mt-6 md:mt-10 max-w-[640px] text-[16px] md:text-[22px] leading-[1.4] md:leading-[1.35] tracking-[-0.01em] text-white/85"
+          className="mt-8 md:mt-14 max-w-[900px] text-[22px] sm:text-[28px] md:text-[40px] leading-[1.25] md:leading-[1.2] tracking-[-0.015em] text-white font-medium"
         >
-          Fußball, Tennis, BattleKart, Billard und Pizza-Bar. Ein Ort zum
-          Abschalten, Schwitzen und Lachen.
+          Ein Ort zum Abschalten, Schwitzen und Lachen.
         </motion.p>
 
         <motion.div
@@ -83,22 +82,22 @@ export default function Hero() {
           className="mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full max-w-[380px] sm:max-w-none sm:w-auto"
         >
           <motion.a
-            href="#angebot"
+            href="#buchen"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, ease: [0.23, 1, 0.32, 1], delay: 0.78 }}
             className="btn btn-primary w-full sm:w-auto"
           >
-            Angebot ansehen
+            Wie buche ich?
           </motion.a>
           <motion.a
-            href="tel:+4965028811"
+            href="tel:+4915111611216"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, ease: [0.23, 1, 0.32, 1], delay: 0.86 }}
             className="btn btn-onDark-secondary w-full sm:w-auto"
           >
-            06502 8811
+            0151 111 611 216
           </motion.a>
         </motion.div>
       </motion.div>

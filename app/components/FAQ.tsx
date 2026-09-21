@@ -50,7 +50,10 @@ export default function FAQ() {
             </h2>
           </div>
           <p className="text-[15px] text-ink-2 max-w-sm">
-            Nichts dabei? Ruf uns an unter <a className="link-arrow !text-ink !font-medium" href="tel:+4965028811">06502 8811</a>.
+            Nichts dabei? Ruf uns an unter{" "}
+            <a className="link-arrow !text-ink !font-medium" href="tel:+4915111611216">0151 111 611 216</a>
+            {" "}oder{" "}
+            <a className="link-arrow !text-ink !font-medium" href="tel:+491756663336">0175 666 3336</a>.
           </p>
         </div>
 

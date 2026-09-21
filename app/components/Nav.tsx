@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import clsx from "clsx";
 
 const links = [
+  { label: "Buchen", href: "#buchen" },
   { label: "Soccer", href: "#soccer" },
-  { label: "Tennis", href: "#tennis" },
+  { label: "Tennis & Padel", href: "#tennis" },
   { label: "BattleKart", href: "#battlekart" },
-  { label: "Billard", href: "#billard" },
   { label: "Geburtstag", href: "#geburtstag" },
   { label: "Kontakt", href: "#kontakt" },
 ];
@@ -41,7 +41,7 @@ export default function Nav() {
           >
             <img
               src="/images/logo-bcs.png"
-              alt="Boris Cucka Sport Logo"
+              alt="Sportcenter Kenn"
               width={26}
               height={26}
               className="h-[26px] w-[26px] rounded-full object-cover"
@@ -68,22 +68,22 @@ export default function Nav() {
 
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+4965028811"
+              href="tel:+4915111611216"
               className={clsx(
                 "transition-colors duration-150 ease-out",
                 scrolled ? "text-ink-2 hover:text-ink" : "text-white/75 hover:text-white"
               )}
             >
-              06502 8811
+              0151 111 611 216
             </a>
-            <a href="#kontakt" className="btn btn-primary !h-8 !px-4 !text-[12.5px]">
-              Reservieren
+            <a href="#buchen" className="btn btn-primary !h-8 !px-4 !text-[12.5px]">
+              Buchen
             </a>
           </div>
 
           <div className="md:hidden flex items-center gap-2">
             <a
-              href="tel:+4965028811"
+              href="tel:+4915111611216"
               aria-label="Anrufen"
               className={clsx(
                 "h-9 w-9 grid place-items-center rounded-full transition-colors",
@@ -142,11 +142,11 @@ export default function Nav() {
               </a>
             ))}
             <a
-              href="tel:+4965028811"
+              href="tel:+4915111611216"
               onClick={() => setOpen(false)}
               className="btn btn-primary mt-3 w-full"
             >
-              Anrufen · 06502 8811
+              Anrufen · 0151 111 611 216
             </a>
           </div>
         </div>

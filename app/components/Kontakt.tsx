@@ -13,27 +13,22 @@ export default function Kontakt() {
           <span className="text-ink-2">einfach direkt.</span>
         </h2>
         <p className="mt-6 md:mt-8 max-w-[560px] mx-auto text-[15.5px] md:text-[21px] leading-[1.45] md:leading-[1.4] text-ink-2 tracking-[-0.01em]">
-          Am schnellsten geht es telefonisch. Für Firmenevents, Turniere und
-          Kindergeburtstage gern per Mail.
+          Am schnellsten geht es telefonisch. Zwei Nummern, direkt am Platz
+          erreichbar.
         </p>
       </div>
 
       <div className="mx-auto max-w-[1200px] px-5 md:px-6 pb-20 md:pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
-          <ContactCard
-            eyebrow="Telefon"
-            value="06502 8811"
-            href="tel:+4965028811"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
           <ContactCard
             eyebrow="Mobil"
             value="0151 111 611 216"
             href="tel:+4915111611216"
           />
           <ContactCard
-            eyebrow="E-Mail"
-            value="boriscucka@web.de"
-            href="mailto:boriscucka@web.de"
+            eyebrow="Mobil"
+            value="0175 666 3336"
+            href="tel:+491756663336"
           />
         </div>
 
@@ -57,9 +52,6 @@ export default function Kontakt() {
                 className="btn btn-primary"
               >
                 Route planen
-              </a>
-              <a href="mailto:boriscucka@web.de" className="btn btn-secondary">
-                Anfrage schreiben
               </a>
             </div>
           </div>
@@ -99,7 +91,7 @@ function ContactCard({
       <div className="mt-3 text-[22px] md:text-[30px] font-semibold tracking-[-0.02em] leading-tight break-all">
         {value}
       </div>
-      <div className="mt-8 link-arrow !text-[15px]">Öffnen →</div>
+      <div className="mt-8 link-arrow !text-[15px]">Anrufen →</div>
     </a>
   );
 }

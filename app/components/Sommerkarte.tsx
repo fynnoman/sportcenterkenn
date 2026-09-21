@@ -21,8 +21,8 @@ export default function Sommerkarte() {
             <p className="mt-4 text-[15px] text-ink-2">
               Gültig vom 01.05. bis 30.09.
             </p>
-            <a href="tel:+4965028811" className="btn btn-primary mt-8">
-              Sommerkarte sichern
+            <a href="tel:+4915111611216" className="btn btn-primary mt-8">
+              0151 111 611 216
             </a>
           </div>
 

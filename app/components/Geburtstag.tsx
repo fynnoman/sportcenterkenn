@@ -63,10 +63,16 @@ export default function Geburtstag() {
           />
         </div>
 
-        <div className="mt-10 md:mt-14 text-center">
-          <a href="tel:+4965028811" className="btn btn-primary">
-            Termin anfragen
+        <div className="mt-10 md:mt-14 text-center flex flex-wrap items-center justify-center gap-3">
+          <a href="tel:+4915111611216" className="btn btn-primary">
+            0151 111 611 216
           </a>
+          <a href="tel:+491756663336" className="btn btn-secondary">
+            0175 666 3336
+          </a>
+        </div>
+        <div className="mt-4 text-center text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-ink-3">
+          Termine telefonisch abstimmen
         </div>
       </div>
     </section>
