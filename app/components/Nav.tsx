@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { SITE_PHONES } from "../lib/site";
 
@@ -15,26 +14,6 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const [onLight, setOnLight] = useState(false);
-  const pathname = usePathname() ?? "/";
-  const alwaysLight = pathname === "/impressum" || pathname === "/datenschutz";
-
-  useEffect(() => {
-    if (alwaysLight) {
-      setOnLight(true);
-      return;
-    }
-    const onScroll = () => {
-      setOnLight(window.scrollY > window.innerHeight - 80);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, [alwaysLight]);
 
   useEffect(() => {
     if (!open) return;
@@ -54,17 +33,12 @@ export default function Nav() {
     <>
       <header
         className={clsx(
-          "sticky top-0 z-50 w-full",
-          "transition-colors duration-300 ease-out",
-          "backdrop-blur-2xl backdrop-saturate-150",
-          onLight
-            ? "text-ink border-b border-black/5"
-            : "text-white border-b border-white/15"
+          "sticky top-0 z-50 w-full text-ink",
+          "backdrop-blur-2xl backdrop-saturate-150 border-b border-black/5"
         )}
         style={{
-          background: onLight
-            ? "linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.55) 100%)"
-            : "linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.55) 100%)",
           WebkitBackdropFilter: "saturate(160%) blur(24px)",
         }}
       >
@@ -72,7 +46,7 @@ export default function Nav() {
           <div className="h-16 flex items-center justify-between gap-4">
             <a
               href="/#top"
-              className="flex items-center gap-3 font-medium tracking-[-0.01em] shrink-0"
+              className="flex items-center gap-3 font-medium tracking-[-0.01em] shrink-0 text-ink"
             >
               <img
                 src="/images/logo-bcs.png"
@@ -91,12 +65,7 @@ export default function Nav() {
                 <a
                   key={l.href}
                   href={l.href}
-                  className={clsx(
-                    "px-3 py-2 text-[14px] rounded-full transition-colors duration-150 ease-out whitespace-nowrap",
-                    onLight
-                      ? "text-ink-2 hover:text-ink hover:bg-black/5"
-                      : "text-white/85 hover:text-white hover:bg-white/10"
-                  )}
+                  className="px-3 py-2 text-[14px] rounded-full whitespace-nowrap text-ink hover:bg-black/5 transition-colors duration-150 ease-out"
                 >
                   {l.label}
                 </a>
@@ -106,12 +75,7 @@ export default function Nav() {
             <div className="hidden lg:flex items-center gap-3 shrink-0">
               <a
                 href={`tel:${SITE_PHONES[0].tel}`}
-                className={clsx(
-                  "text-[14px] whitespace-nowrap transition-colors duration-150",
-                  onLight
-                    ? "text-ink-2 hover:text-ink"
-                    : "text-white/85 hover:text-white"
-                )}
+                className="text-[14px] whitespace-nowrap text-ink hover:opacity-70 transition-opacity duration-150"
               >
                 {SITE_PHONES[0].label}
               </a>
@@ -127,10 +91,7 @@ export default function Nav() {
               <a
                 href={`tel:${SITE_PHONES[0].tel}`}
                 aria-label="Anrufen"
-                className={clsx(
-                  "h-10 w-10 grid place-items-center rounded-full transition-colors",
-                  onLight ? "text-ink hover:bg-black/5" : "text-white hover:bg-white/10"
-                )}
+                className="h-10 w-10 grid place-items-center rounded-full text-ink hover:bg-black/5 transition-colors"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
                   <path
@@ -147,10 +108,7 @@ export default function Nav() {
                 aria-label={open ? "Menü schließen" : "Menü öffnen"}
                 aria-expanded={open}
                 onClick={() => setOpen((s) => !s)}
-                className={clsx(
-                  "h-10 w-10 grid place-items-center rounded-full transition-colors",
-                  onLight ? "text-ink hover:bg-black/5" : "text-white hover:bg-white/10"
-                )}
+                className="h-10 w-10 grid place-items-center rounded-full text-ink hover:bg-black/5 transition-colors"
               >
                 <span className="relative block w-5 h-[14px]">
                   <span
