@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Wie stimmt man ein Firmenevent ab?",
     answer:
-      "Direkt telefonisch: 0151 111 611 216 oder 0175 666 3336. Gruppengröße, Termin und Wunschbausteine werden im Gespräch geklärt.",
+      "Direkt telefonisch: 0151 111 611 216, 0175 666 3336 oder 0151 1650 4334. Gruppengröße, Termin und Wunschbausteine werden im Gespräch geklärt.",
   },
 ];
 
@@ -126,7 +126,8 @@ export default function TeameventTrierPage() {
           plant und ob es eher sportlich oder eher geselliger werden soll.
         </p>
         <p>
-          <strong>0151 111 611 216</strong> · <strong>0175 666 3336</strong>
+          <strong>0151 111 611 216</strong> · <strong>0175 666 3336</strong> ·{" "}
+          <strong>0151 1650 4334</strong>
         </p>
       </LandingSection>
 

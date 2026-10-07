@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "Wie werden die Angebote gebucht?",
     answer:
-      "Soccer, Tennis und Padel (in Planung) werden telefonisch beim Sportcenter Kenn gebucht: 0151 111 611 216 oder 0175 666 3336. BattleKart läuft über battlekart.com/de/trier, die Pizza-Bar über pizzabarkenn.de.",
+      "Soccer, Tennis und Padel (in Planung) werden telefonisch beim Sportcenter Kenn gebucht: 0151 111 611 216, 0175 666 3336 oder 0151 1650 4334. BattleKart läuft über battlekart.com/de/trier, die Pizza-Bar über pizzabarkenn.de.",
   },
 ];
 

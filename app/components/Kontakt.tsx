@@ -13,13 +13,13 @@ export default function Kontakt() {
           <span className="text-ink-2">einfach direkt.</span>
         </h2>
         <p className="mt-6 md:mt-8 max-w-[560px] mx-auto text-[15.5px] md:text-[21px] leading-[1.45] md:leading-[1.4] text-ink-2 tracking-[-0.01em]">
-          Am schnellsten geht es telefonisch. Zwei Nummern, direkt am Platz
+          Am schnellsten geht es telefonisch. Drei Nummern, direkt am Platz
           erreichbar.
         </p>
       </div>
 
       <div className="mx-auto max-w-[1200px] px-5 md:px-6 pb-20 md:pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
           <ContactCard
             eyebrow="Mobil"
             value="0151 111 611 216"
@@ -29,6 +29,11 @@ export default function Kontakt() {
             eyebrow="Mobil"
             value="0175 666 3336"
             href="tel:+491756663336"
+          />
+          <ContactCard
+            eyebrow="Mobil"
+            value="0151 1650 4334"
+            href="tel:+4915116504334"
           />
         </div>
 

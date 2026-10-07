@@ -31,6 +31,9 @@ export default function Tennis() {
               <a href="tel:+491756663336" className="btn btn-secondary w-full sm:w-auto">
                 0175 666 3336
               </a>
+              <a href="tel:+4915116504334" className="btn btn-secondary w-full sm:w-auto">
+                0151 1650 4334
+              </a>
               <a
                 href={EXTERNAL_LINKS.padelBooking}
                 target="_blank"

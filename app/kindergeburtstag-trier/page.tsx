@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Wie stimmt man Ablauf und Termin ab?",
     answer:
-      "Termin, Gruppengröße und Ablauf werden telefonisch geklärt: 0151 111 611 216 oder 0175 666 3336.",
+      "Termin, Gruppengröße und Ablauf werden telefonisch geklärt: 0151 111 611 216, 0175 666 3336 oder 0151 1650 4334.",
   },
   {
     question: "Wo findet der Kindergeburtstag statt?",
@@ -81,7 +81,8 @@ export default function KindergeburtstagTrierPage() {
         </p>
         <p>
           <strong className="text-white">0151 111 611 216</strong> ·{" "}
-          <strong className="text-white">0175 666 3336</strong>
+          <strong className="text-white">0175 666 3336</strong> ·{" "}
+          <strong className="text-white">0151 1650 4334</strong>
         </p>
       </LandingSection>
 

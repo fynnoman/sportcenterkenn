@@ -56,12 +56,17 @@ export default function Nav() {
         className={clsx(
           "sticky top-0 z-50 w-full",
           "transition-colors duration-300 ease-out",
-          "supports-[backdrop-filter]:bg-white/0 supports-[backdrop-filter]:backdrop-blur-xl",
-          "bg-white/60",
+          "backdrop-blur-2xl backdrop-saturate-150",
           onLight
             ? "text-ink border-b border-black/5"
-            : "text-white border-b border-white/10"
+            : "text-white border-b border-white/15"
         )}
+        style={{
+          background: onLight
+            ? "linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.55) 100%)"
+            : "linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 100%)",
+          WebkitBackdropFilter: "saturate(160%) blur(24px)",
+        }}
       >
         <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
           <div className="h-16 flex items-center justify-between gap-4">

@@ -82,7 +82,7 @@ export default function Footer() {
         <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-3 text-[11.5px] md:text-[12px]">
           <div>
             © {new Date().getFullYear()} Sportcenter Kenn · Spitzstraße 20 ·
-            54344 Kenn · 0151 111 611 216
+            54344 Kenn · 0151 111 611 216 · 0175 666 3336 · 0151 1650 4334
           </div>
           <div>Alle Rechte vorbehalten.</div>
         </div>

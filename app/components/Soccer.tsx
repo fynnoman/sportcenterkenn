@@ -30,9 +30,12 @@ export default function Soccer() {
               <a href="tel:+491756663336" className="btn btn-onDark-secondary w-full sm:w-auto">
                 0175 666 3336
               </a>
+              <a href="tel:+4915116504334" className="btn btn-onDark-secondary w-full sm:w-auto">
+                0151 1650 4334
+              </a>
             </div>
             <div className="mt-4 text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-white/55">
-              Buchung telefonisch · beide Nummern erreichbar
+              Buchung telefonisch · alle drei Nummern erreichbar
             </div>
             <div className="mt-5">
               <Link

@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Wie reserviere ich einen Tennisplatz?",
     answer:
-      "Reservierungen laufen direkt beim Sportcenter Kenn telefonisch über 0151 111 611 216 oder 0175 666 3336.",
+      "Reservierungen laufen direkt beim Sportcenter Kenn telefonisch über 0151 111 611 216, 0175 666 3336 oder 0151 1650 4334.",
   },
 ];
 

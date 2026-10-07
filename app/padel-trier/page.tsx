@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Wie erfahre ich, wann Padel startet?",
     answer:
-      "Für Rückfragen und eine Voranmeldung erreichst du das Sportcenter Kenn telefonisch unter 0151 111 611 216 oder 0175 666 3336.",
+      "Für Rückfragen und eine Voranmeldung erreichst du das Sportcenter Kenn telefonisch unter 0151 111 611 216, 0175 666 3336 oder 0151 1650 4334.",
   },
 ];
 
