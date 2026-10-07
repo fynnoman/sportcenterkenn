@@ -4,7 +4,7 @@ type Row = { tag: string; title: string; body: string; actions: Action[] };
 const rows: Row[] = [
   {
     tag: "01",
-    title: "Tennis, Padel & Soccer",
+    title: "Tennis & Soccer",
     body:
       "Buchung direkt telefonisch. Ruf einfach an, wir prüfen live, welcher Platz frei ist und reservieren dich ein.",
     actions: [
@@ -15,6 +15,19 @@ const rows: Row[] = [
   },
   {
     tag: "02",
+    title: "Padel",
+    body:
+      "Padel buchst du online über Circle Square beim Mosel Racket Club. Verfügbarkeit und Slots siehst du direkt im Kalender.",
+    actions: [
+      {
+        label: "Padel online buchen →",
+        href: "https://circlesquare.app/en/clubs/mosel-racket-club?date=2026-09-25",
+        external: true,
+      },
+    ],
+  },
+  {
+    tag: "03",
     title: "BattleKart",
     body:
       "Sessions werden online über die offizielle BattleKart-Seite gebucht. Termine, Verfügbarkeit und Preise findest du dort.",
@@ -27,7 +40,7 @@ const rows: Row[] = [
     ],
   },
   {
-    tag: "03",
+    tag: "04",
     title: "Pizza-Bar",
     body:
       "Karte, Öffnungszeiten und Reservierung laufen direkt über die Pizza-Bar. Für größere Gruppen lohnt sich eine Vorreservierung.",
@@ -40,10 +53,10 @@ const rows: Row[] = [
     ],
   },
   {
-    tag: "04",
-    title: "Billard & Kids-Automaten",
+    tag: "05",
+    title: "Billard & Automaten",
     body:
-      "Einfach vorbeikommen. Billard-Tische und die Automaten für die Kleinen sind vor Ort direkt an der Bar frei nutzbar.",
+      "Einfach vorbeikommen. Billard-Tische und die Automaten sind vor Ort direkt an der Bar frei nutzbar.",
     actions: [],
   },
 ];
