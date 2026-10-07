@@ -17,16 +17,13 @@ const rows: Row[] = [
     tag: "02",
     title: "Padel",
     body:
-      "Padel buchst du online über Circle Square beim Mosel Racket Club. Alternativ geht die Reservierung auch telefonisch über die bekannten Nummern.",
+      "Padel buchst du online über Circle Square beim Mosel Racket Club. Verfügbarkeit und Slots siehst du direkt im Kalender.",
     actions: [
       {
         label: "Padel online buchen →",
         href: "https://circlesquare.app/en/clubs/mosel-racket-club?date=2026-09-25",
         external: true,
       },
-      { label: "0151 111 611 216", href: "tel:+4915111611216" },
-      { label: "0175 666 3336", href: "tel:+491756663336" },
-      { label: "0151 1650 4334", href: "tel:+4915116504334" },
     ],
   },
   {
