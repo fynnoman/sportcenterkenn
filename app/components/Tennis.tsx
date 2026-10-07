@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PHOTOS } from "../lib/photos";
+import { EXTERNAL_LINKS } from "../lib/site";
 
 export default function Tennis() {
   return (
@@ -30,9 +31,17 @@ export default function Tennis() {
               <a href="tel:+491756663336" className="btn btn-secondary w-full sm:w-auto">
                 0175 666 3336
               </a>
+              <a
+                href={EXTERNAL_LINKS.padelBooking}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-secondary w-full sm:w-auto"
+              >
+                Padel online buchen
+              </a>
             </div>
             <div className="mt-4 text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-ink-3">
-              Buchung telefonisch · beide Nummern erreichbar
+              Tennis telefonisch · Padel online über Circle Square
             </div>
             <div className="mt-5 flex flex-wrap gap-4 text-[14.5px]">
               <Link href="/tennishalle-trier" className="link-arrow !font-medium">

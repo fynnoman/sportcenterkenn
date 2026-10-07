@@ -79,20 +79,20 @@ export default function Extras() {
           <div
             className="relative overflow-hidden rounded-[22px] text-white aspect-[5/4] sm:aspect-[4/5] md:aspect-auto md:min-h-[440px] flex flex-col justify-end p-5 md:p-7"
             style={{
-              backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 100%), url('${PHOTOS.kids}')`,
+              backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 100%), url('${PHOTOS.spielautomaten}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
             <div className="text-[10.5px] md:text-[11px] uppercase tracking-[0.18em] text-white/70">
-              Für die Kleinen
+              Für alle
             </div>
             <div className="mt-2 text-[24px] md:text-[30px] font-semibold tracking-[-0.02em] leading-[1.05]">
               Spiel-Automaten
             </div>
             <p className="mt-3 text-[13.5px] md:text-[14.5px] text-white/80 leading-relaxed max-w-md">
-              Klassische Kids-Automaten für kurze Pausen zwischen den Spielen,
-              gemütlich neben der Pizza-Bar.
+              Airhockey, Kicker und klassische Automaten für Groß und Klein. Für
+              kurze Pausen zwischen den Spielen, gemütlich neben der Pizza-Bar.
             </p>
           </div>
         </div>

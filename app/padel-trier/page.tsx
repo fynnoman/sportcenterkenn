@@ -8,7 +8,7 @@ import {
 } from "../components/LandingShell";
 import { FAQJsonLd, ServiceJsonLd } from "../components/JsonLd";
 import { PHOTOS } from "../lib/photos";
-import { SITE_URL } from "../lib/site";
+import { SITE_URL, EXTERNAL_LINKS } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "Padel Trier — Padel bei Sportcenter Kenn in Planung",
@@ -56,8 +56,9 @@ export default function PadelTrierPage() {
       <LandingHero
         eyebrow="Padel bei Trier"
         headline="Padel kommt nach Kenn."
-        sub="Im Sportcenter Kenn ist Padel in Planung. Wer als Erstes spielen möchte, meldet sich am besten kurz telefonisch — dann bekommst du Bescheid, sobald es losgeht."
+        sub="Im Sportcenter Kenn ist Padel in Planung. Wer als Erstes spielen möchte, meldet sich am besten kurz telefonisch — dann bekommst du Bescheid, sobald es losgeht. Padel sofort buchbar beim Mosel Racket Club über Circle Square."
         image={PHOTOS.tennisHero}
+        externalCta={{ label: "Padel online buchen", href: EXTERNAL_LINKS.padelBooking }}
       />
 
       <LandingSection title="Padel im Sportcenter Kenn ist in Planung">

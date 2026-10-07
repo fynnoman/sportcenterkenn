@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { SITE_URL, SITE_NAME } from "./lib/site";
 import { OrganizationJsonLd, WebSiteJsonLd } from "./components/JsonLd";
+import CookieBanner from "./components/CookieBanner";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <OrganizationJsonLd />
         <WebSiteJsonLd />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

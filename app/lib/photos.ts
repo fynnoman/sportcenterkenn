@@ -10,6 +10,7 @@ export const PHOTOS = {
   battlekartHero: "/images/battlekart.webp",
   billiards: "/images/billard.webp",
   kids: "/images/geburtstag.webp",
+  spielautomaten: "/images/spielautomaten.webp",
 
   pizza: `${U}photo-1513104890138-7c749659a591${q(1600)}`,
   pizzaOven: `${U}photo-1590947132387-155cc02f3212${q(1200)}`,

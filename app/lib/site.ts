@@ -11,11 +11,14 @@ export const SITE_ADDRESS = {
 export const SITE_PHONES = [
   { label: "0151 111 611 216", tel: "+4915111611216" },
   { label: "0175 666 3336", tel: "+491756663336" },
+  { label: "0151 1650 4334", tel: "+4915116504334" },
 ] as const;
 
 export const EXTERNAL_LINKS = {
   battlekart: "https://www.battlekart.com/de/trier",
   pizzabar: "https://www.pizzabarkenn.de",
+  padelBooking:
+    "https://circlesquare.app/en/clubs/mosel-racket-club?date=2026-09-25",
 } as const;
 
 export const LANDING_PAGES = [

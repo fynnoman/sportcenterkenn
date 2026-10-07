@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { SITE_PHONES } from "../lib/site";
 
 const links = [
   { label: "Buchen", href: "#buchen" },
@@ -14,14 +16,28 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const hasDarkHero =
+    pathname === "/" || !["/impressum", "/datenschutz"].includes(pathname ?? "");
+  const [scrolled, setScrolled] = useState(!hasDarkHero);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    if (!hasDarkHero) {
+      setScrolled(true);
+      return;
+    }
+    const onScroll = () => {
+      const threshold = Math.max(window.innerHeight * 0.85, 400);
+      setScrolled(window.scrollY > threshold);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [hasDarkHero]);
 
   useEffect(() => {
     if (!open) return;
@@ -40,27 +56,29 @@ export default function Nav() {
   return (
     <header
       className={clsx(
-        "sticky top-0 z-50 w-full",
-        "transition-[background-color,border-color,backdrop-filter,color] duration-300 ease-out",
+        "sticky top-0 z-50 w-full bg-transparent",
+        "transition-[color,border-color] duration-300 ease-out",
+        "backdrop-blur-2xl backdrop-saturate-150",
+        "[-webkit-backdrop-filter:saturate(150%)_blur(28px)]",
         scrolled
-          ? "bg-[color-mix(in_oklab,var(--color-bg)_78%,transparent)] backdrop-saturate-150 backdrop-blur-xl border-b border-[color-mix(in_oklab,var(--color-ink)_10%,transparent)] text-ink"
-          : "bg-transparent border-b border-transparent text-white"
+          ? "text-ink border-b border-black/5"
+          : "text-white border-b border-white/10"
       )}
     >
-      <div className="mx-auto max-w-[1024px] px-4 md:px-6">
-        <div className="h-14 md:h-11 flex items-center justify-between text-[13px]">
+      <div className="mx-auto max-w-[1360px] px-5 md:px-8">
+        <div className="h-16 md:h-16 flex items-center justify-between text-[14px]">
           <a
             href="#top"
-            className="flex items-center gap-2 font-medium tracking-[-0.01em]"
+            className="flex items-center gap-3 font-medium tracking-[-0.01em]"
           >
             <img
               src="/images/logo-bcs.png"
               alt="Sportcenter Kenn"
-              width={26}
-              height={26}
-              className="h-[26px] w-[26px] rounded-full object-cover"
+              width={44}
+              height={44}
+              className="h-[40px] w-[40px] md:h-[44px] md:w-[44px] rounded-full object-cover"
             />
-            <span>Sportcenter Kenn</span>
+            <span className="text-[15px] md:text-[16px]">Sportcenter Kenn</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-1">
@@ -72,7 +90,7 @@ export default function Nav() {
                   "px-3 py-1.5 transition-colors duration-150 ease-out",
                   scrolled
                     ? "text-ink-2 hover:text-ink"
-                    : "text-white/75 hover:text-white"
+                    : "text-white/80 hover:text-white"
                 )}
               >
                 {l.label}
@@ -81,23 +99,29 @@ export default function Nav() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href="tel:+4915111611216"
-              className={clsx(
-                "transition-colors duration-150 ease-out",
-                scrolled ? "text-ink-2 hover:text-ink" : "text-white/75 hover:text-white"
-              )}
-            >
-              0151 111 611 216
-            </a>
-            <a href="#buchen" className="btn btn-primary !h-8 !px-4 !text-[12.5px]">
+            {SITE_PHONES.map((p, i) => (
+              <a
+                key={p.tel}
+                href={`tel:${p.tel}`}
+                className={clsx(
+                  "transition-colors duration-150 ease-out whitespace-nowrap",
+                  i === 0 ? "inline-flex" : "hidden lg:inline-flex",
+                  scrolled
+                    ? "text-ink-2 hover:text-ink"
+                    : "text-white/80 hover:text-white"
+                )}
+              >
+                {p.label}
+              </a>
+            ))}
+            <a href="#buchen" className="btn btn-primary !h-9 !px-5 !text-[13px]">
               Buchen
             </a>
           </div>
 
           <div className="md:hidden flex items-center gap-2">
             <a
-              href="tel:+4915111611216"
+              href={`tel:${SITE_PHONES[0].tel}`}
               aria-label="Anrufen"
               className={clsx(
                 "h-9 w-9 grid place-items-center rounded-full transition-colors",
@@ -141,7 +165,7 @@ export default function Nav() {
         <div
           className={clsx(
             "md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-out",
-            open ? "max-h-[520px] opacity-100 pb-4" : "max-h-0 opacity-0"
+            open ? "max-h-[640px] opacity-100 pb-4" : "max-h-0 opacity-0"
           )}
         >
           <div className="flex flex-col text-[16px] rounded-2xl bg-white/95 backdrop-blur-md p-2 mt-2 shadow-lg text-ink">
@@ -155,13 +179,21 @@ export default function Nav() {
                 {l.label}
               </a>
             ))}
-            <a
-              href="tel:+4915111611216"
-              onClick={() => setOpen(false)}
-              className="btn btn-primary mt-3 w-full"
-            >
-              Anrufen
-            </a>
+            <div className="mt-2 flex flex-col gap-2 px-1 pt-2 border-t border-line/60">
+              {SITE_PHONES.map((p, i) => (
+                <a
+                  key={p.tel}
+                  href={`tel:${p.tel}`}
+                  onClick={() => setOpen(false)}
+                  className={clsx(
+                    "btn w-full",
+                    i === 0 ? "btn-primary" : "btn-secondary"
+                  )}
+                >
+                  {p.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
