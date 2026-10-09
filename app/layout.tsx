@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Sportcenter Kenn",
   },
   description:
-    "Sportcenter Kenn bei Trier: Indoor- und Outdoor-Soccer, Tennis auf Sand, Padel im Aufbau, BattleKart und Pizza-Bar direkt vor Ort. Reservierung telefonisch.",
+    "Sportcenter Kenn bei Trier: Indoor-Soccer, Tennis auf Sand, Padel im Aufbau, BattleKart und Pizza-Bar direkt vor Ort. Reservierung telefonisch.",
   applicationName: SITE_NAME,
   alternates: {
     canonical: "/",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: "Sportcenter Kenn — Soccer, Tennis, Padel & Freizeit bei Trier",
     description:
-      "Soccer indoor & outdoor, Tennis auf Sand, Padel im Aufbau, BattleKart und Pizza-Bar in Kenn nahe Trier.",
+      "Soccer indoor, Tennis auf Sand, Padel im Aufbau, BattleKart und Pizza-Bar in Kenn nahe Trier.",
     images: [
       {
         url: "/images/hero-luftbild.png",

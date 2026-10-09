@@ -45,7 +45,7 @@ const tiles = [
   {
     label: "Soccer",
     href: "/soccerhalle-trier",
-    body: "Indoor-Käfig und Outdoor-Platz. Details auf der Soccer-Seite.",
+    body: "Indoor-Käfig in der Halle. Details auf der Soccer-Seite.",
     external: false,
   },
   {

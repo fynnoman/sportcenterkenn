@@ -3,8 +3,8 @@ import { PHOTOS } from "../lib/photos";
 const items = [
   {
     tag: "01",
-    title: "Indoor & Outdoor Soccer",
-    line: "Drinnen wie draußen",
+    title: "Indoor Soccer",
+    line: "Käfig in der Halle",
     href: "#soccer",
     image: PHOTOS.soccerHero,
     span: "md:col-span-3 md:row-span-2",

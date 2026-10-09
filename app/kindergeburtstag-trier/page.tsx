@@ -89,7 +89,7 @@ export default function KindergeburtstagTrierPage() {
       <LandingSection title="Was rundherum am Standort geht">
         <p>
           Direkt am Standort in Kenn ist mehr als nur ein Platz: es gibt
-          Soccer indoor und outdoor (
+          Soccer indoor (
           <Link href="/soccerhalle-trier" className="link-arrow !text-ink !font-medium">
             Details
           </Link>

@@ -14,14 +14,14 @@ export default function Soccer() {
               </span>
             </div>
             <h2 className="text-[34px] sm:text-[48px] md:text-[76px] font-semibold tracking-[-0.03em] leading-[1.05] md:leading-[1.02]">
-              Fußball, drinnen wie draußen.
+              Fußball in der Halle.
             </h2>
           </div>
           <div className="md:col-span-5">
             <p className="text-[15.5px] md:text-[17px] leading-[1.5] text-white/75">
               Spontan mit den Kollegen verabreden, in der Firma ein Turnier
-              aufziehen oder Sohn und Tochter vorbeischicken: Indoor im Käfig
-              oder Outdoor auf offenem Platz, bei uns rollt der Ball.
+              aufziehen oder Sohn und Tochter vorbeischicken: Indoor im Käfig,
+              bei uns rollt der Ball.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-3">
               <a href="tel:+4915111611216" className="btn btn-onDark-primary w-full sm:w-auto">

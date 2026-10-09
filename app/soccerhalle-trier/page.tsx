@@ -11,14 +11,14 @@ import { PHOTOS } from "../lib/photos";
 import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "Soccerhalle Trier — Indoor & Outdoor Fußball bei Kenn",
+  title: "Soccerhalle Trier — Indoor-Fußball bei Kenn",
   description:
-    "Indoor- und Outdoor-Fußball im Sportcenter Kenn nahe Trier. Plätze direkt beim Betreiber telefonisch reservieren.",
+    "Indoor-Fußball im Sportcenter Kenn nahe Trier. Plätze direkt beim Betreiber telefonisch reservieren.",
   alternates: { canonical: "/soccerhalle-trier" },
   openGraph: {
-    title: "Soccerhalle Trier — Indoor & Outdoor Fußball bei Kenn",
+    title: "Soccerhalle Trier — Indoor-Fußball bei Kenn",
     description:
-      "Fußball indoor und outdoor bei Trier, im Sportcenter Kenn. Reservierung telefonisch.",
+      "Fußball indoor bei Trier, im Sportcenter Kenn. Reservierung telefonisch.",
     url: `${SITE_URL}/soccerhalle-trier`,
     type: "website",
   },
@@ -36,9 +36,9 @@ const faqs = [
       "Reservierungen laufen direkt beim Sportcenter Kenn telefonisch über 0151 111 611 216, 0175 666 3336 oder 0151 1650 4334.",
   },
   {
-    question: "Gibt es Indoor- und Outdoor-Fußball?",
+    question: "Wo wird in Kenn Fußball gespielt?",
     answer:
-      "Ja. Sportcenter Kenn bietet Fußball indoor und outdoor. Bei Regen wird auf die Halle ausgewichen.",
+      "Fußball läuft im Sportcenter Kenn indoor im Käfig, bei jedem Wetter und ganzjährig.",
   },
 ];
 
@@ -47,26 +47,25 @@ export default function SoccerhalleTrierPage() {
     <LandingShell breadcrumb={{ name: "Soccerhalle Trier", path: "/soccerhalle-trier" }}>
       <ServiceJsonLd
         name="Soccerhalle Trier"
-        description="Indoor- und Outdoor-Fußball im Sportcenter Kenn bei Trier. Reservierung telefonisch."
-        serviceType="Indoor soccer, outdoor soccer"
+        description="Indoor-Fußball im Sportcenter Kenn bei Trier. Reservierung telefonisch."
+        serviceType="Indoor soccer"
         url={`${SITE_URL}/soccerhalle-trier`}
       />
       <FAQJsonLd items={faqs} />
 
       <LandingHero
         eyebrow="Soccerhalle bei Trier"
-        headline="Fußball, drinnen wie draußen."
-        sub="Im Sportcenter Kenn spielst du Indoor-Soccer im Käfig und Outdoor auf offenem Platz — bei jedem Wetter und ganz in der Nähe von Trier."
+        headline="Fußball in der Halle."
+        sub="Im Sportcenter Kenn spielst du Indoor-Soccer im Käfig, bei jedem Wetter und ganz in der Nähe von Trier."
         image={PHOTOS.soccerHero}
       />
 
       <LandingSection title="Soccerhalle im Sportcenter Kenn">
         <p>
           Das Sportcenter Kenn liegt in Kenn, direkt bei Trier. Fußball läuft
-          hier ganzjährig: Indoor im Käfig, wenn draußen das Wetter nicht
-          mitspielt, und auf den offenen Plätzen, sobald die Sonne rauskommt.
-          Ob spontane Runde mit den Kollegen, geplantes Turnier oder Training
-          in der Gruppe, der Ball rollt hier zuverlässig.
+          hier ganzjährig im Indoor-Käfig, bei jedem Wetter. Ob spontane Runde
+          mit den Kollegen, geplantes Turnier oder Training in der Gruppe, der
+          Ball rollt hier zuverlässig.
         </p>
         <p>
           Wie viele Plätze in welchen Größen aktuell frei sind, klärst du am

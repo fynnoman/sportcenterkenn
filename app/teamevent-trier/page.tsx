@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Welche Aktivitäten stehen für Teamevents zur Verfügung?",
     answer:
-      "Am Standort gibt es Soccer indoor und outdoor, Tennis auf Sand und Billard. BattleKart und Pizza-Bar sind ebenfalls direkt am Standort verfügbar und werden über die jeweiligen Partner gebucht.",
+      "Am Standort gibt es Soccer indoor, Tennis auf Sand und Billard. BattleKart und Pizza-Bar sind ebenfalls direkt am Standort verfügbar und werden über die jeweiligen Partner gebucht.",
   },
   {
     question: "Wie stimmt man ein Firmenevent ab?",
@@ -76,8 +76,8 @@ export default function TeameventTrierPage() {
 
       <LandingSection title="Was ihr am Standort kombinieren könnt" dark>
         <p>
-          <strong className="text-white">Soccer.</strong> Indoor im Käfig oder
-          outdoor auf offenem Platz. Details:{" "}
+          <strong className="text-white">Soccer.</strong> Indoor im Käfig.
+          Details:{" "}
           <Link href="/soccerhalle-trier" className="link-arrow link-arrow-onDark !font-medium">
             Soccerhalle Trier
           </Link>
