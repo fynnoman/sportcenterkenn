@@ -42,6 +42,17 @@ export default function Geburtstag() {
             Nachspielzeit nur, wenn der Platz frei ist. Bälle gibt es vor Ort,
             eigene dürfen natürlich mitgebracht werden.
           </p>
+          <div className="mt-6 md:mt-8 flex items-baseline gap-2">
+            <span className="text-[13px] md:text-[14px] uppercase tracking-[0.14em] text-white/60">
+              ab
+            </span>
+            <span className="text-[40px] sm:text-[52px] md:text-[64px] font-semibold tracking-[-0.03em] leading-none text-white tabular-nums">
+              140
+            </span>
+            <span className="text-[22px] sm:text-[28px] md:text-[32px] font-semibold tracking-[-0.02em] text-white">
+              €
+            </span>
+          </div>
           <ContactCTAs variant="dark" align="start" className="mt-8" />
         </div>
 
