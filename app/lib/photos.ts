@@ -5,7 +5,7 @@ export const PHOTOS = {
   hero: "/images/hero-luftbild.webp",
   heroMobile: "/images/hero-luftbild-mobile.webp",
 
-  soccerHero: "/images/soccer.webp",
+  soccerHero: "/images/soccer.png",
   tennisHero: "/images/tennis.webp",
   padelHero: "/images/padel.png",
   battlekartHero: "/images/battlekart.webp",
