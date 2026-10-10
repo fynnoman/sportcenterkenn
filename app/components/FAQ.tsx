@@ -5,7 +5,7 @@ const faqs = [
   },
   {
     q: "Was kostet eine Stunde Fußball oder Tennis?",
-    a: "Die Preise hängen von Uhrzeit, Platz und Gruppengröße ab. Am schnellsten erfährst du sie am Telefon, wir stellen dir das passende Paket zusammen.",
+    a: "Soccer kostet 70 € pro Stunde, Tennis outdoor 20 € pro Stunde und Tennis indoor 30 € pro Stunde. Kindergeburtstag startet ab 140 €, die Sommerkarte für die gesamte Outdoor-Saison kostet 140 €.",
   },
   {
     q: "Muss ich Sportschuhe oder Ausrüstung mitbringen?",
