@@ -53,7 +53,7 @@ export default function Hero() {
         style={{ y, opacity }}
         className="relative z-10 flex flex-col items-center justify-center text-center px-5 md:px-6 pt-28 pb-24 md:pt-48 md:pb-32"
       >
-        <h1 className="h-display uppercase text-[52px] sm:text-[80px] md:text-[128px] lg:text-[152px] max-w-[1000px]">
+        <h1 className="h-display uppercase text-[40px] sm:text-[64px] md:text-[104px] lg:text-[124px] max-w-[1000px]">
           <span className="block overflow-hidden pb-[0.05em]">
             <motion.span
               initial={{ y: "105%" }}
@@ -69,7 +69,7 @@ export default function Hero() {
               initial={{ y: "105%" }}
               animate={{ y: "0%" }}
               transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1], delay: 0.28 }}
-              className="inline-block will-change-transform text-brand-onDark"
+              className="inline-block will-change-transform text-brand-onDark text-[80%]"
             >
               KENN
             </motion.span>
