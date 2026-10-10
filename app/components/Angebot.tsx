@@ -7,26 +7,27 @@ const items = [
     line: "Käfig in der Halle",
     href: "#soccer",
     image: PHOTOS.soccerHero,
-    span: "md:col-span-3 md:row-span-2",
-    size: "text-[28px] md:text-[40px]",
   },
   {
     tag: "02",
-    title: "Tennis & Padel",
-    line: "Sand & Netz",
+    title: "Tennis",
+    line: "Sand, drinnen & draußen",
     href: "#tennis",
     image: PHOTOS.tennisHero,
-    span: "md:col-span-3 md:row-span-1",
-    size: "text-[24px] md:text-[30px]",
   },
   {
     tag: "03",
+    title: "Padel",
+    line: "Glas, Käfig, schnelle Runden",
+    href: "#padel",
+    image: PHOTOS.padelHero,
+  },
+  {
+    tag: "04",
     title: "BattleKart",
     line: "Karts trifft Videospiel",
     href: "#battlekart",
     image: PHOTOS.battlekartHero,
-    span: "md:col-span-3 md:row-span-1",
-    size: "text-[22px] md:text-[26px]",
   },
 ];
 
@@ -52,12 +53,12 @@ export default function Angebot() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-6 md:auto-rows-[200px] gap-3 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {items.map((it) => (
             <a
               key={it.tag}
               href={it.href}
-              className={`group relative overflow-hidden rounded-[22px] text-white ${it.span} min-h-[240px] md:min-h-0 flex flex-col justify-end p-5 md:p-7 transition-transform duration-200 ease-out hover:-translate-y-[3px] active:scale-[0.99]`}
+              className="group relative overflow-hidden rounded-[22px] text-white min-h-[280px] md:min-h-[340px] flex flex-col justify-end p-5 md:p-7 transition-transform duration-200 ease-out hover:-translate-y-[3px] active:scale-[0.99]"
               style={{
                 backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.85) 100%), url('${it.image}')`,
                 backgroundSize: "cover",
@@ -71,7 +72,7 @@ export default function Angebot() {
               <div className="text-[10.5px] md:text-[11px] uppercase tracking-[0.18em] text-white/70">
                 {it.line}
               </div>
-              <div className={`mt-2 font-semibold tracking-[-0.02em] leading-[1.05] ${it.size}`}>
+              <div className="mt-2 font-semibold tracking-[-0.02em] leading-[1.05] text-[24px] md:text-[30px]">
                 {it.title}
               </div>
               <span

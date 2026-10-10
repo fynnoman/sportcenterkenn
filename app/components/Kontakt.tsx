@@ -1,3 +1,6 @@
+import { SITE_PHONE } from "../lib/site";
+import { WhatsAppButton, PhoneButton } from "./ContactButtons";
+
 export default function Kontakt() {
   return (
     <section id="kontakt" className="relative bg-bg text-ink overflow-hidden">
@@ -13,31 +16,17 @@ export default function Kontakt() {
           <span className="text-ink-2">einfach direkt.</span>
         </h2>
         <p className="mt-6 md:mt-8 max-w-[560px] mx-auto text-[15.5px] md:text-[21px] leading-[1.45] md:leading-[1.4] text-ink-2 tracking-[-0.01em]">
-          Am schnellsten geht es telefonisch. Drei Nummern, direkt am Platz
-          erreichbar.
+          Am schnellsten geht es per WhatsApp oder telefonisch, direkt am
+          Platz erreichbar.
         </p>
+        <div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3">
+          <WhatsAppButton className="w-full sm:w-auto" />
+          <PhoneButton variant="light" className="w-full sm:w-auto" />
+        </div>
       </div>
 
       <div className="mx-auto max-w-[1200px] px-5 md:px-6 pb-20 md:pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
-          <ContactCard
-            eyebrow="Mobil"
-            value="0151 111 611 216"
-            href="tel:+4915111611216"
-          />
-          <ContactCard
-            eyebrow="Mobil"
-            value="0175 666 3336"
-            href="tel:+491756663336"
-          />
-          <ContactCard
-            eyebrow="Mobil"
-            value="0151 1650 4334"
-            href="tel:+4915116504334"
-          />
-        </div>
-
-        <div className="mt-4 md:mt-6 grid md:grid-cols-2 gap-3 md:gap-6">
+        <div className="grid md:grid-cols-2 gap-3 md:gap-6">
           <div className="rounded-[20px] md:rounded-[22px] bg-white p-6 md:p-10">
             <div className="text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-ink-2">
               Adresse
@@ -48,6 +37,9 @@ export default function Kontakt() {
             </div>
             <div className="mt-3 text-[14.5px] md:text-[15px] text-ink-2">
               Rheinland-Pfalz · nahe Trier
+            </div>
+            <div className="mt-4 text-[14.5px] md:text-[15px] text-ink-2 tabular-nums">
+              {SITE_PHONE.label}
             </div>
             <div className="mt-6 md:mt-8">
               <a
@@ -73,30 +65,5 @@ export default function Kontakt() {
         </div>
       </div>
     </section>
-  );
-}
-
-function ContactCard({
-  eyebrow,
-  value,
-  href,
-}: {
-  eyebrow: string;
-  value: string;
-  href: string;
-}) {
-  return (
-    <a
-      href={href}
-      className="rounded-[20px] md:rounded-[22px] bg-white p-6 md:p-10 block transition-transform duration-200 ease-out hover:-translate-y-[2px] active:scale-[0.99]"
-    >
-      <div className="text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-ink-2">
-        {eyebrow}
-      </div>
-      <div className="mt-3 text-[22px] sm:text-[26px] md:text-[30px] font-semibold tracking-[-0.02em] leading-tight tabular-nums">
-        {value}
-      </div>
-      <div className="mt-6 md:mt-8 link-arrow !text-[15px]">Anrufen →</div>
-    </a>
   );
 }

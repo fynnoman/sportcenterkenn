@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { PHOTOS } from "../lib/photos";
+import { WhatsAppButton, PhoneButton } from "./ContactButtons";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -44,7 +45,7 @@ export default function Hero() {
       <div className="absolute top-[76px] md:top-28 left-5 md:left-10 z-10 flex items-center gap-2 md:gap-3 text-white/80">
         <span className="rule-brand" />
         <span className="text-[10px] md:text-[11px] uppercase tracking-[0.18em] md:tracking-[0.24em]">
-          Boris Cucka Sport · Kenn
+          Boris Cucka Sport
         </span>
       </div>
 
@@ -52,7 +53,7 @@ export default function Hero() {
         style={{ y, opacity }}
         className="relative z-10 flex flex-col items-center justify-center text-center px-5 md:px-6 pt-28 pb-24 md:pt-48 md:pb-32"
       >
-        <h1 className="h-display text-[52px] sm:text-[80px] md:text-[128px] lg:text-[152px] max-w-[1000px]">
+        <h1 className="h-display uppercase text-[52px] sm:text-[80px] md:text-[128px] lg:text-[152px] max-w-[1000px]">
           <span className="block overflow-hidden pb-[0.05em]">
             <motion.span
               initial={{ y: "105%" }}
@@ -60,7 +61,7 @@ export default function Hero() {
               transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1], delay: 0.15 }}
               className="inline-block will-change-transform"
             >
-              Sportcenter
+              SPORTCENTER
             </motion.span>
           </span>
           <span className="block overflow-hidden pb-[0.05em]">
@@ -70,7 +71,7 @@ export default function Hero() {
               transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1], delay: 0.28 }}
               className="inline-block will-change-transform text-brand-onDark"
             >
-              Kenn
+              KENN
             </motion.span>
           </span>
         </h1>
@@ -90,24 +91,8 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.7 }}
           className="mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full max-w-[380px] sm:max-w-none sm:w-auto"
         >
-          <motion.a
-            href="#buchen"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, ease: [0.23, 1, 0.32, 1], delay: 0.78 }}
-            className="btn btn-primary w-full sm:w-auto"
-          >
-            Wie buche ich?
-          </motion.a>
-          <motion.a
-            href="tel:+4915111611216"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, ease: [0.23, 1, 0.32, 1], delay: 0.86 }}
-            className="btn btn-onDark-secondary w-full sm:w-auto"
-          >
-            0151 111 611 216
-          </motion.a>
+          <WhatsAppButton className="w-full sm:w-auto" />
+          <PhoneButton variant="dark" className="w-full sm:w-auto" />
         </motion.div>
       </motion.div>
 

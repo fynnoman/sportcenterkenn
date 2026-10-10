@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 import clsx from "clsx";
-import { SITE_PHONES } from "../lib/site";
+import { SITE_PHONE } from "../lib/site";
 
 const links = [
+  { label: "Home", href: "/#top" },
   { label: "Soccer", href: "/#soccer" },
-  { label: "Tennis & Padel", href: "/#tennis" },
+  { label: "Tennis", href: "/#tennis" },
+  { label: "Padel", href: "/#padel" },
   { label: "BattleKart", href: "/#battlekart" },
   { label: "Geburtstag", href: "/#geburtstag" },
   { label: "Kontakt", href: "/#kontakt" },
@@ -74,22 +76,39 @@ export default function Nav() {
 
             <div className="hidden lg:flex items-center gap-3 shrink-0">
               <a
-                href={`tel:${SITE_PHONES[0].tel}`}
-                className="text-[14px] whitespace-nowrap text-ink hover:opacity-70 transition-opacity duration-150"
+                href={SITE_PHONE.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Per WhatsApp schreiben"
+                className="btn btn-whatsapp !h-9 !px-4 !text-[13px]"
               >
-                {SITE_PHONES[0].label}
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.44 0 .1 5.33.1 11.91c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.9 11.9 0 0 0 5.75 1.47h.01c6.58 0 11.92-5.33 11.92-11.91 0-3.18-1.24-6.17-3.43-8.44ZM12.03 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.72.97.99-3.63-.23-.37a9.84 9.84 0 0 1-1.51-5.26C2.16 6.44 6.57 2.03 12.03 2.03c2.63 0 5.1 1.03 6.95 2.89a9.78 9.78 0 0 1 2.88 6.96c0 5.46-4.41 9.92-9.83 9.92Zm5.68-7.42c-.31-.16-1.84-.91-2.13-1.01-.29-.11-.5-.16-.71.16-.21.31-.82 1.01-1 1.22-.19.21-.37.24-.68.08-.31-.16-1.31-.48-2.49-1.54-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.13-.63.14-.14.31-.37.46-.55.16-.19.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.7-.97-2.33-.26-.62-.52-.53-.71-.54-.18-.01-.4-.01-.61-.01-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.63 0 1.55 1.13 3.05 1.29 3.26.16.21 2.22 3.4 5.39 4.77.75.32 1.34.52 1.8.66.76.24 1.44.21 1.99.13.61-.09 1.84-.75 2.1-1.48.26-.72.26-1.34.18-1.48-.08-.14-.29-.21-.6-.37Z" />
+                </svg>
+                WhatsApp
               </a>
               <a
-                href="/#buchen"
-                className="btn btn-primary !h-9 !px-5 !text-[13px]"
+                href={`tel:${SITE_PHONE.tel}`}
+                className="text-[14px] whitespace-nowrap text-ink hover:opacity-70 transition-opacity duration-150 tabular-nums"
               >
-                Buchen
+                {SITE_PHONE.label}
               </a>
             </div>
 
             <div className="flex lg:hidden items-center gap-1 shrink-0">
               <a
-                href={`tel:${SITE_PHONES[0].tel}`}
+                href={SITE_PHONE.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Per WhatsApp schreiben"
+                className="h-10 w-10 grid place-items-center rounded-full text-white bg-[#25D366] hover:bg-[#1ebe5a] transition-colors"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.44 0 .1 5.33.1 11.91c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.9 11.9 0 0 0 5.75 1.47h.01c6.58 0 11.92-5.33 11.92-11.91 0-3.18-1.24-6.17-3.43-8.44ZM12.03 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.72.97.99-3.63-.23-.37a9.84 9.84 0 0 1-1.51-5.26C2.16 6.44 6.57 2.03 12.03 2.03c2.63 0 5.1 1.03 6.95 2.89a9.78 9.78 0 0 1 2.88 6.96c0 5.46-4.41 9.92-9.83 9.92Zm5.68-7.42c-.31-.16-1.84-.91-2.13-1.01-.29-.11-.5-.16-.71.16-.21.31-.82 1.01-1 1.22-.19.21-.37.24-.68.08-.31-.16-1.31-.48-2.49-1.54-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.13-.63.14-.14.31-.37.46-.55.16-.19.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.7-.97-2.33-.26-.62-.52-.53-.71-.54-.18-.01-.4-.01-.61-.01-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.63 0 1.55 1.13 3.05 1.29 3.26.16.21 2.22 3.4 5.39 4.77.75.32 1.34.52 1.8.66.76.24 1.44.21 1.99.13.61-.09 1.84-.75 2.1-1.48.26-.72.26-1.34.18-1.48-.08-.14-.29-.21-.6-.37Z" />
+                </svg>
+              </a>
+              <a
+                href={`tel:${SITE_PHONE.tel}`}
                 aria-label="Anrufen"
                 className="h-10 w-10 grid place-items-center rounded-full text-ink hover:bg-black/5 transition-colors"
               >
@@ -168,22 +187,25 @@ export default function Nav() {
           </nav>
           <div className="px-3 pb-3 pt-1 border-t border-line/70">
             <div className="text-[11px] uppercase tracking-[0.14em] text-ink-3 px-1 pt-3 pb-2">
-              Telefonisch buchen
+              Direkt kontaktieren
             </div>
             <div className="flex flex-col gap-2">
-              {SITE_PHONES.map((p, i) => (
-                <a
-                  key={p.tel}
-                  href={`tel:${p.tel}`}
-                  onClick={() => setOpen(false)}
-                  className={clsx(
-                    "btn w-full !h-11",
-                    i === 0 ? "btn-primary" : "btn-secondary"
-                  )}
-                >
-                  {p.label}
-                </a>
-              ))}
+              <a
+                href={SITE_PHONE.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setOpen(false)}
+                className="btn btn-whatsapp w-full !h-11"
+              >
+                WhatsApp schreiben
+              </a>
+              <a
+                href={`tel:${SITE_PHONE.tel}`}
+                onClick={() => setOpen(false)}
+                className="btn btn-secondary w-full !h-11"
+              >
+                {SITE_PHONE.label}
+              </a>
             </div>
             <a
               href="/#buchen"

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { PHOTOS } from "../lib/photos";
+import { ContactCTAs } from "./ContactButtons";
 
 export default function Geburtstag() {
   return (
@@ -16,9 +16,8 @@ export default function Geburtstag() {
           <span className="text-ink-2">Kuchen essen.</span>
         </h2>
         <p className="mt-6 md:mt-8 max-w-[620px] mx-auto text-[15.5px] md:text-[21px] leading-[1.45] md:leading-[1.4] text-ink-2 tracking-[-0.01em]">
-          Der perfekte Rahmen für kleine Sportler: eigener Platz, reservierter
-          Tisch, alles was gebraucht wird. Die Details stimmen wir gemeinsam
-          am Telefon ab.
+          Der perfekte Rahmen für kleine Sportler. Die Details stimmen wir
+          gemeinsam am Telefon oder per WhatsApp ab.
         </p>
       </div>
 
@@ -31,117 +30,42 @@ export default function Geburtstag() {
             backgroundPosition: "center",
           }}
         />
-        <div className="grid md:grid-cols-3 gap-4 md:gap-6">
-          <Tile
-            eyebrow="Bei uns"
-            title="Soccer & Sport"
-            items={[
-              "Eigener Platz für die Truppe",
-              "Reservierter Tisch für Kuchen und Geschenke",
-              "Bälle vor Ort, eigene sind auch willkommen",
-            ]}
-            variant="dark"
-          />
-          <Tile
-            eyebrow="Ihr dürft mitbringen"
-            title="Kuchen & gute Laune"
-            items={[
-              "So viele Kinder und Erwachsene wie ihr wollt",
-              "Animateur eurer Wahl",
-              "Geburtstagskuchen, Muffins, Mineralwasser",
-            ]}
-            variant="light"
-          />
-          <Tile
-            eyebrow="Bitte nicht"
-            title="Eigene Getränke"
-            items={[
-              "Selbst mitgebrachte Softdrinks nicht gestattet",
-              "Alkoholische Getränke nicht gestattet",
-              "Kaffee und Tee nicht gestattet",
-            ]}
-            variant="outline"
-          />
+
+        <div className="rounded-[22px] md:rounded-[28px] bg-ink text-white p-6 sm:p-10 md:p-14">
+          <div className="text-[11px] md:text-[12px] uppercase tracking-[0.18em] text-brand-onDark font-semibold">
+            Das Paket
+          </div>
+          <h3 className="mt-3 text-[28px] sm:text-[40px] md:text-[56px] font-semibold tracking-[-0.03em] leading-[1.05]">
+            2h Soccer-Sport. Bälle. Kostenlose Nachspielzeit.
+          </h3>
+          <p className="mt-4 md:mt-5 text-[14.5px] md:text-[17px] text-white/70 leading-[1.5] max-w-[760px]">
+            Nachspielzeit nur, wenn der Platz frei ist. Bälle gibt es vor Ort,
+            eigene dürfen natürlich mitgebracht werden.
+          </p>
+          <ContactCTAs variant="dark" align="start" className="mt-8" />
         </div>
 
-        <div className="mt-10 md:mt-14 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 px-2 sm:px-0">
-          <a href="tel:+4915111611216" className="btn btn-primary w-full sm:w-auto">
-            0151 111 611 216
-          </a>
-          <a href="tel:+491756663336" className="btn btn-secondary w-full sm:w-auto">
-            0175 666 3336
-          </a>
-          <a href="tel:+4915116504334" className="btn btn-secondary w-full sm:w-auto">
-            0151 1650 4334
-          </a>
-        </div>
-        <div className="mt-4 text-center text-[12.5px] md:text-[13px] uppercase tracking-[0.14em] text-ink-3">
-          Termine telefonisch abstimmen
-        </div>
-        <div className="mt-6 text-center">
-          <Link
-            href="/kindergeburtstag-trier"
-            className="link-arrow !text-ink !font-medium"
-          >
-            Zur Seite Kindergeburtstag Trier →
-          </Link>
+        <div className="mt-6 md:mt-8 grid md:grid-cols-2 gap-3 md:gap-4">
+          <div className="rounded-[20px] border border-line p-5 md:p-7 text-ink-2">
+            <div className="text-[11px] uppercase tracking-[0.14em] text-ink-3 font-semibold">
+              Dürft ihr mitbringen
+            </div>
+            <p className="mt-3 text-[14px] md:text-[15px] leading-[1.55]">
+              So viele Kinder und Erwachsene wie ihr wollt, Animateur,
+              Geburtstagskuchen, Muffins, Mineralwasser.
+            </p>
+          </div>
+          <div className="rounded-[20px] border border-line p-5 md:p-7 text-ink-2">
+            <div className="text-[11px] uppercase tracking-[0.14em] text-ink-3 font-semibold">
+              Bitte nicht
+            </div>
+            <p className="mt-3 text-[14px] md:text-[15px] leading-[1.55]">
+              Selbst mitgebrachte Soft- oder alkoholische Getränke sowie Kaffee
+              und Tee sind nicht gestattet.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function Tile({
-  eyebrow,
-  title,
-  items,
-  variant,
-}: {
-  eyebrow: string;
-  title: string;
-  items: string[];
-  variant: "dark" | "light" | "outline";
-}) {
-  const base =
-    "rounded-[20px] md:rounded-[22px] p-6 md:p-10 h-full flex flex-col transition-transform duration-200 ease-out hover:-translate-y-[2px]";
-  const styles =
-    variant === "dark"
-      ? "bg-ink text-white"
-      : variant === "light"
-      ? "bg-white text-ink"
-      : "border border-line text-ink";
-
-  return (
-    <div className={`${base} ${styles}`}>
-      <div
-        className={`text-[13px] uppercase tracking-[0.14em] ${
-          variant === "dark" ? "text-white/60" : "text-ink-2"
-        }`}
-      >
-        {eyebrow}
-      </div>
-      <h3 className="mt-3 text-[22px] md:text-[28px] font-semibold tracking-[-0.02em] leading-[1.1]">
-        {title}
-      </h3>
-      <ul className="mt-6 space-y-3 text-[15px] leading-[1.45]">
-        {items.map((it) => (
-          <li key={it} className="flex items-start gap-3">
-            <span
-              aria-hidden
-              className={`mt-[8px] h-[4px] w-[4px] rounded-full shrink-0 ${
-                variant === "dark" ? "bg-white/60" : "bg-ink"
-              }`}
-            />
-            <span
-              className={
-                variant === "dark" ? "text-white/85" : "text-ink-2"
-              }
-            >
-              {it}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }

@@ -1,4 +1,11 @@
-type Action = { label: string; href: string; external?: boolean };
+import { SITE_PHONE, EXTERNAL_LINKS } from "../lib/site";
+
+type Action = {
+  label: string;
+  href: string;
+  external?: boolean;
+  style?: "primary" | "whatsapp" | "phone";
+};
 type Row = { tag: string; title: string; body: string; actions: Action[] };
 
 const rows: Row[] = [
@@ -6,11 +13,19 @@ const rows: Row[] = [
     tag: "01",
     title: "Tennis & Soccer",
     body:
-      "Buchung direkt telefonisch. Ruf einfach an, wir prüfen live, welcher Platz frei ist und reservieren dich ein.",
+      "Buchung direkt per WhatsApp oder telefonisch. Wir prüfen live, welcher Platz frei ist und reservieren dich ein.",
     actions: [
-      { label: "0151 111 611 216", href: "tel:+4915111611216" },
-      { label: "0175 666 3336", href: "tel:+491756663336" },
-      { label: "0151 1650 4334", href: "tel:+4915116504334" },
+      {
+        label: "WhatsApp schreiben",
+        href: SITE_PHONE.whatsapp,
+        external: true,
+        style: "whatsapp",
+      },
+      {
+        label: SITE_PHONE.label,
+        href: `tel:${SITE_PHONE.tel}`,
+        style: "phone",
+      },
     ],
   },
   {
@@ -21,8 +36,9 @@ const rows: Row[] = [
     actions: [
       {
         label: "Padel online buchen →",
-        href: "https://circlesquare.app/en/clubs/mosel-racket-club?date=2026-09-25",
+        href: EXTERNAL_LINKS.padelBooking,
         external: true,
+        style: "primary",
       },
     ],
   },
@@ -34,8 +50,9 @@ const rows: Row[] = [
     actions: [
       {
         label: "Zur BattleKart-Seite →",
-        href: "https://www.battlekart.com/de/trier",
+        href: EXTERNAL_LINKS.battlekart,
         external: true,
+        style: "primary",
       },
     ],
   },
@@ -47,12 +64,19 @@ const rows: Row[] = [
     actions: [
       {
         label: "pizzabarkenn.de →",
-        href: "https://www.pizzabarkenn.de",
+        href: EXTERNAL_LINKS.pizzabar,
         external: true,
+        style: "primary",
       },
     ],
   },
 ];
+
+function actionClass(style: Action["style"]) {
+  if (style === "whatsapp") return "btn btn-whatsapp";
+  if (style === "phone") return "btn btn-secondary";
+  return "btn btn-primary";
+}
 
 export default function WieBucheIch() {
   return (
@@ -102,7 +126,7 @@ export default function WieBucheIch() {
                       {...(a.external
                         ? { target: "_blank", rel: "noreferrer" }
                         : {})}
-                      className="btn btn-primary !h-11 sm:!h-9 !px-5 sm:!px-4 !text-[14.5px] sm:!text-[13px] w-full sm:w-auto"
+                      className={`${actionClass(a.style)} !h-11 sm:!h-10 !px-5 sm:!px-5 !text-[14.5px] sm:!text-[14px] w-full sm:w-auto`}
                     >
                       {a.label}
                     </a>

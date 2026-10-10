@@ -1,10 +1,12 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import WieBucheIch from "./components/WieBucheIch";
 import Angebot from "./components/Angebot";
+import WieBucheIch from "./components/WieBucheIch";
 import Welcome from "./components/Welcome";
 import Soccer from "./components/Soccer";
 import Tennis from "./components/Tennis";
+import Padel from "./components/Padel";
+import TennisTurniere from "./components/TennisTurniere";
 import Sommerkarte from "./components/Sommerkarte";
 import BattleKart from "./components/BattleKart";
 import Geburtstag from "./components/Geburtstag";
@@ -19,11 +21,13 @@ export default function Page() {
       <Nav />
       <main className="flex-1">
         <Hero />
-        <WieBucheIch />
         <Angebot />
+        <WieBucheIch />
         <Welcome />
         <Soccer />
         <Tennis />
+        <Padel />
+        <TennisTurniere />
         <Sommerkarte />
         <BattleKart />
         <Geburtstag />

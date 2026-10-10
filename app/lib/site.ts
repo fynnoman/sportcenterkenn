@@ -8,24 +8,19 @@ export const SITE_ADDRESS = {
   country: "DE",
 } as const;
 
-export const SITE_PHONES = [
-  { label: "0151 111 611 216", tel: "+4915111611216" },
-  { label: "0175 666 3336", tel: "+491756663336" },
-  { label: "0151 1650 4334", tel: "+4915116504334" },
-] as const;
+export const SITE_PHONE = {
+  label: "0151 116 112 16",
+  tel: "+4915111611216",
+  whatsapp: "https://wa.me/4915111611216",
+} as const;
+
+export const SITE_PHONES = [SITE_PHONE] as const;
 
 export const EXTERNAL_LINKS = {
   battlekart: "https://www.battlekart.com/de/trier",
   pizzabar: "https://www.pizzabarkenn.de",
   padelBooking:
     "https://circlesquare.app/en/clubs/mosel-racket-club?date=2026-09-25",
+  saarlandOpen: "https://saarland-open.de",
 } as const;
 
-export const LANDING_PAGES = [
-  { path: "/soccerhalle-trier", label: "Soccerhalle Trier" },
-  { path: "/tennishalle-trier", label: "Tennishalle Trier" },
-  { path: "/padel-trier", label: "Padel Trier" },
-  { path: "/kindergeburtstag-trier", label: "Kindergeburtstag Trier" },
-  { path: "/teamevent-trier", label: "Teamevent Trier" },
-  { path: "/indoor-aktivitaeten-trier", label: "Indoor Aktivitäten Trier" },
-] as const;

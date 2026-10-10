@@ -1,20 +1,24 @@
-const groups: { title: string; links: { label: string; href: string }[] }[] = [
+import { SITE_PHONE, EXTERNAL_LINKS } from "../lib/site";
+
+const groups: {
+  title: string;
+  links: { label: string; href: string; external?: boolean }[];
+}[] = [
   {
     title: "Sport",
     links: [
-      { label: "Soccerhalle Trier", href: "/soccerhalle-trier" },
-      { label: "Tennishalle Trier", href: "/tennishalle-trier" },
-      { label: "Padel Trier", href: "/padel-trier" },
-      { label: "BattleKart", href: "#battlekart" },
+      { label: "Soccer", href: "/#soccer" },
+      { label: "Tennis", href: "/#tennis" },
+      { label: "Padel", href: "/#padel" },
+      { label: "BattleKart", href: "/#battlekart" },
     ],
   },
   {
     title: "Anlässe",
     links: [
-      { label: "Kindergeburtstag Trier", href: "/kindergeburtstag-trier" },
-      { label: "Teamevent Trier", href: "/teamevent-trier" },
-      { label: "Indoor Aktivitäten Trier", href: "/indoor-aktivitaeten-trier" },
+      { label: "Kindergeburtstag", href: "/#geburtstag" },
       { label: "Sommerkarte", href: "/#sommerkarte" },
+      { label: "Tennisschule & Turniere", href: "/#tennis-turniere" },
     ],
   },
   {
@@ -23,6 +27,15 @@ const groups: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Buchen", href: "/#buchen" },
       { label: "Drumherum", href: "/#extras" },
       { label: "Kontakt", href: "/#kontakt" },
+    ],
+  },
+  {
+    title: "Extern",
+    links: [
+      { label: "Pizza-Bar Kenn", href: EXTERNAL_LINKS.pizzabar, external: true },
+      { label: "BattleKart Trier", href: EXTERNAL_LINKS.battlekart, external: true },
+      { label: "Padel online buchen", href: EXTERNAL_LINKS.padelBooking, external: true },
+      { label: "Saarland Open", href: EXTERNAL_LINKS.saarlandOpen, external: true },
     ],
   },
   {
@@ -55,7 +68,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-6 text-[13px]">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-6 text-[13px]">
           {groups.map((g) => (
             <div key={g.title}>
               <div className="text-ink font-semibold text-[13px] tracking-[-0.005em]">
@@ -66,6 +79,9 @@ export default function Footer() {
                   <li key={l.label}>
                     <a
                       href={l.href}
+                      {...(l.external
+                        ? { target: "_blank", rel: "noreferrer" }
+                        : {})}
                       className="hover:text-ink transition-colors duration-150 ease-out"
                     >
                       {l.label}
@@ -82,7 +98,7 @@ export default function Footer() {
         <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-3 text-[11.5px] md:text-[12px]">
           <div>
             © {new Date().getFullYear()} Sportcenter Kenn · Spitzstraße 20 ·
-            54344 Kenn · 0151 111 611 216 · 0175 666 3336 · 0151 1650 4334
+            54344 Kenn · {SITE_PHONE.label}
           </div>
           <div>Alle Rechte vorbehalten.</div>
         </div>

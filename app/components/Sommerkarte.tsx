@@ -1,3 +1,5 @@
+import { ContactCTAs } from "./ContactButtons";
+
 export default function Sommerkarte() {
   return (
     <section id="sommerkarte" className="bg-bg py-16 md:py-24 px-5 md:px-6">
@@ -16,15 +18,25 @@ export default function Sommerkarte() {
             </h2>
             <p className="mt-5 md:mt-6 text-[15px] md:text-[16px] text-ink-2 leading-[1.5] max-w-[420px]">
               Der bequeme Weg durch die Outdoor-Saison. Ohne jedes Mal buchen,
-              ohne Rechnen. Konditionen erfährst du am schnellsten telefonisch.
+              ohne Rechnen.
             </p>
-            <a href="tel:+4915111611216" className="btn btn-primary mt-7 md:mt-8 w-full sm:w-auto">
-              0151 111 611 216
-            </a>
+            <ContactCTAs variant="light" className="mt-7 md:mt-8" />
           </div>
 
-          <div className="p-6 sm:p-8 md:p-14">
-            <div className="text-[14px] uppercase tracking-[0.14em] text-ink-2 mb-6">
+          <div className="p-6 sm:p-8 md:p-14 flex flex-col">
+            <div className="flex items-baseline gap-2">
+              <span className="text-[48px] sm:text-[64px] md:text-[88px] font-semibold tracking-[-0.03em] leading-none text-ink tabular-nums">
+                140
+              </span>
+              <span className="text-[24px] sm:text-[30px] md:text-[36px] font-semibold tracking-[-0.02em] text-ink">
+                €
+              </span>
+            </div>
+            <div className="mt-2 text-[13px] md:text-[14px] uppercase tracking-[0.14em] text-ink-2">
+              für die gesamte Outdoor-Saison
+            </div>
+
+            <div className="mt-8 text-[13px] uppercase tracking-[0.14em] text-ink-2 mb-5">
               Inklusive
             </div>
             <ul className="space-y-4 text-[16px] leading-[1.45]">

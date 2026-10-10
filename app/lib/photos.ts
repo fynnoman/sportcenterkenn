@@ -7,6 +7,7 @@ export const PHOTOS = {
 
   soccerHero: "/images/soccer.webp",
   tennisHero: "/images/tennis.webp",
+  padelHero: "/images/padel.png",
   battlekartHero: "/images/battlekart.webp",
   billiards: "/images/billard.webp",
   kids: "/images/geburtstag.webp",
