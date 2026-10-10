@@ -6,7 +6,14 @@ type Action = {
   external?: boolean;
   style?: "primary" | "whatsapp" | "phone";
 };
-type Row = { tag: string; title: string; body: string; actions: Action[] };
+type Price = { label: string; value: string };
+type Row = {
+  tag: string;
+  title: string;
+  body: string;
+  prices?: Price[];
+  actions: Action[];
+};
 
 const rows: Row[] = [
   {
@@ -14,6 +21,11 @@ const rows: Row[] = [
     title: "Tennis & Soccer",
     body:
       "Buchung direkt per WhatsApp oder telefonisch. Wir prüfen live, welcher Platz frei ist und reservieren dich ein.",
+    prices: [
+      { label: "Soccer", value: "70 € / h" },
+      { label: "Tennis outdoor", value: "20 € / h" },
+      { label: "Tennis indoor", value: "30 € / h" },
+    ],
     actions: [
       {
         label: "WhatsApp schreiben",
@@ -117,6 +129,23 @@ export default function WieBucheIch() {
               <p className="mt-4 text-[14.5px] md:text-[15.5px] leading-[1.55] text-ink-2">
                 {r.body}
               </p>
+              {r.prices && r.prices.length > 0 && (
+                <ul className="mt-5 divide-y divide-line rounded-[14px] border border-line overflow-hidden">
+                  {r.prices.map((p) => (
+                    <li
+                      key={p.label}
+                      className="flex items-center justify-between gap-3 px-4 py-3"
+                    >
+                      <span className="text-[13.5px] md:text-[14px] text-ink-2">
+                        {p.label}
+                      </span>
+                      <span className="text-[14px] md:text-[15px] font-semibold text-ink tabular-nums">
+                        {p.value}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              )}
               {r.actions.length > 0 && (
                 <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-3">
                   {r.actions.map((a) => (
