@@ -56,7 +56,7 @@ export default function Kontakt() {
           <div className="rounded-[20px] md:rounded-[22px] overflow-hidden bg-bg-2 aspect-[4/3] md:aspect-auto md:min-h-full">
             <iframe
               title="Sportcenter Kenn Karte"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=6.7357%2C49.8098%2C6.7757%2C49.8298&layer=mapnik&marker=49.8198%2C6.7557"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=6.7147%2C49.7872%2C6.7347%2C49.8072&layer=mapnik&marker=49.7972%2C6.7247"
               loading="lazy"
               className="w-full h-full min-h-[240px] md:min-h-[360px]"
               style={{ border: 0 }}
