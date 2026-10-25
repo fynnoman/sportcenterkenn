@@ -57,7 +57,7 @@ export default function Geburtstag() {
           <p className="mt-6 md:mt-8 text-[14.5px] md:text-[17px] text-white/70 leading-[1.5] max-w-[760px]">
             Passend zum Geburtstag könnt ihr ganz einfach in der{" "}
             <a
-              href="https://www.pizzabarkenn.de"
+              href="https://www.pizzabarkenn.de/xsoccerhalle-kenn"
               target="_blank"
               rel="noreferrer"
               className="text-brand-onDark underline underline-offset-4 hover:no-underline"
