@@ -54,6 +54,18 @@ export default function Geburtstag() {
             </span>
           </div>
           <ContactCTAs variant="dark" align="start" className="mt-8" />
+          <p className="mt-6 md:mt-8 text-[14.5px] md:text-[17px] text-white/70 leading-[1.5] max-w-[760px]">
+            Passend zum Geburtstag könnt ihr ganz einfach in der{" "}
+            <a
+              href="https://www.pizzabarkenn.de"
+              target="_blank"
+              rel="noreferrer"
+              className="text-brand-onDark underline underline-offset-4 hover:no-underline"
+            >
+              Pizzabar
+            </a>{" "}
+            euer Pizza-Paket mit Getränken dazu buchen.
+          </p>
         </div>
 
         <div className="mt-6 md:mt-8 grid md:grid-cols-2 gap-3 md:gap-4">
